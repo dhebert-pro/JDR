@@ -1,7 +1,7 @@
 {
-  "version": 4,
-  "scope": "race_and_class",
-  "note": "Actions liées aux icônes de race et de classe. Pas de champ order : l'ordre du tableau sert d'ordre d'affichage.",
+  "version": 5,
+  "scope": "race_class_personality",
+  "note": "Actions liées aux icônes de race, de classe et de personnalité. Pas de champ order : l'ordre du tableau sert d'ordre d'affichage.",
   "actions": [
     {
       "id": "oeil_regarder",
@@ -2287,6 +2287,1921 @@
         "lien",
         "lien",
         "echo"
+      ]
+    },
+    {
+      "id": "question_sinterroger",
+      "label": "S’interroger",
+      "category": "Personnalité",
+      "icons": [
+        "question"
+      ]
+    },
+    {
+      "id": "bouclier_se_proteger",
+      "label": "Se protéger",
+      "category": "Personnalité",
+      "icons": [
+        "bouclier"
+      ]
+    },
+    {
+      "id": "sablier_prendre_son_temps",
+      "label": "Prendre son temps",
+      "category": "Personnalité",
+      "icons": [
+        "sablier"
+      ]
+    },
+    {
+      "id": "coeur_agir_avec_empathie",
+      "label": "Agir avec empathie",
+      "category": "Personnalité",
+      "icons": [
+        "coeur"
+      ]
+    },
+    {
+      "id": "fleurfanee_ressentir_une_perte_ou_une_trace_du_passe",
+      "label": "Ressentir une perte ou une trace du passé",
+      "category": "Personnalité",
+      "icons": [
+        "fleurFanee"
+      ]
+    },
+    {
+      "id": "question_question_formuler_une_hypothese",
+      "label": "Formuler une hypothèse",
+      "category": "Personnalité",
+      "icons": [
+        "question",
+        "question"
+      ]
+    },
+    {
+      "id": "bouclier_bouclier_renforcer_sa_defense",
+      "label": "Renforcer sa défense",
+      "category": "Personnalité",
+      "icons": [
+        "bouclier",
+        "bouclier"
+      ]
+    },
+    {
+      "id": "sablier_sablier_attendre_le_bon_moment",
+      "label": "Attendre le bon moment",
+      "category": "Personnalité",
+      "icons": [
+        "sablier",
+        "sablier"
+      ]
+    },
+    {
+      "id": "coeur_coeur_creer_un_lien_emotionnel",
+      "label": "Créer un lien émotionnel",
+      "category": "Personnalité",
+      "icons": [
+        "coeur",
+        "coeur"
+      ]
+    },
+    {
+      "id": "fleurfanee_fleurfanee_accueillir_une_douleur_ancienne",
+      "label": "Accueillir une douleur ancienne",
+      "category": "Personnalité",
+      "icons": [
+        "fleurFanee",
+        "fleurFanee"
+      ]
+    },
+    {
+      "id": "question_bouclier_avancer_malgre_le_doute",
+      "label": "Avancer malgré le doute",
+      "category": "Personnalité",
+      "icons": [
+        "question",
+        "bouclier"
+      ]
+    },
+    {
+      "id": "question_sablier_patienter_pour_comprendre",
+      "label": "Patienter pour comprendre",
+      "category": "Personnalité",
+      "icons": [
+        "question",
+        "sablier"
+      ]
+    },
+    {
+      "id": "question_coeur_questionner_avec_bienveillance",
+      "label": "Questionner avec bienveillance",
+      "category": "Personnalité",
+      "icons": [
+        "question",
+        "coeur"
+      ]
+    },
+    {
+      "id": "question_fleurfanee_reconnaitre_une_tristesse_cachee",
+      "label": "Reconnaître une tristesse cachée",
+      "category": "Personnalité",
+      "icons": [
+        "question",
+        "fleurFanee"
+      ]
+    },
+    {
+      "id": "bouclier_coeur_se_defendre_sans_se_fermer",
+      "label": "Se défendre sans se fermer",
+      "category": "Personnalité",
+      "icons": [
+        "bouclier",
+        "coeur"
+      ]
+    },
+    {
+      "id": "bouclier_sablier_endurer_une_attente_difficile",
+      "label": "Endurer une attente difficile",
+      "category": "Personnalité",
+      "icons": [
+        "bouclier",
+        "sablier"
+      ]
+    },
+    {
+      "id": "bouclier_fleurfanee_se_proteger_dun_souvenir_douloureux",
+      "label": "Se protéger d’un souvenir douloureux",
+      "category": "Personnalité",
+      "icons": [
+        "bouclier",
+        "fleurFanee"
+      ]
+    },
+    {
+      "id": "sablier_coeur_apaiser_avec_le_temps",
+      "label": "Apaiser avec le temps",
+      "category": "Personnalité",
+      "icons": [
+        "sablier",
+        "coeur"
+      ]
+    },
+    {
+      "id": "sablier_fleurfanee_laisser_revenir_un_souvenir",
+      "label": "Laisser revenir un souvenir",
+      "category": "Personnalité",
+      "icons": [
+        "sablier",
+        "fleurFanee"
+      ]
+    },
+    {
+      "id": "coeur_fleurfanee_compatir_a_une_perte",
+      "label": "Compatir à une perte",
+      "category": "Personnalité",
+      "icons": [
+        "coeur",
+        "fleurFanee"
+      ]
+    },
+    {
+      "id": "question_bouclier_sablier_tenir_bon_face_a_lincertitude",
+      "label": "Tenir bon face à l’incertitude",
+      "category": "Personnalité",
+      "icons": [
+        "question",
+        "bouclier",
+        "sablier"
+      ]
+    },
+    {
+      "id": "question_sablier_coeur_comprendre_sans_brusquer",
+      "label": "Comprendre sans brusquer",
+      "category": "Personnalité",
+      "icons": [
+        "question",
+        "sablier",
+        "coeur"
+      ]
+    },
+    {
+      "id": "question_coeur_fleurfanee_chercher_le_sens_dun_chagrin",
+      "label": "Chercher le sens d’un chagrin",
+      "category": "Personnalité",
+      "icons": [
+        "question",
+        "coeur",
+        "fleurFanee"
+      ]
+    },
+    {
+      "id": "bouclier_coeur_fleurfanee_proteger_ce_qui_est_fragile",
+      "label": "Protéger ce qui est fragile",
+      "category": "Personnalité",
+      "icons": [
+        "bouclier",
+        "coeur",
+        "fleurFanee"
+      ]
+    },
+    {
+      "id": "bouclier_sablier_fleurfanee_attendre_malgre_la_peine",
+      "label": "Attendre malgré la peine",
+      "category": "Personnalité",
+      "icons": [
+        "bouclier",
+        "sablier",
+        "fleurFanee"
+      ]
+    },
+    {
+      "id": "sablier_coeur_fleurfanee_accepter_une_verite_melancolique",
+      "label": "Accepter une vérité mélancolique",
+      "category": "Personnalité",
+      "icons": [
+        "sablier",
+        "coeur",
+        "fleurFanee"
+      ]
+    },
+    {
+      "id": "question_oeil_observer_avec_curiosite",
+      "label": "Observer avec curiosité",
+      "category": "Personnalité + race",
+      "icons": [
+        "question",
+        "oeil"
+      ]
+    },
+    {
+      "id": "question_oreille_ecouter_pour_comprendre",
+      "label": "Écouter pour comprendre",
+      "category": "Personnalité + race",
+      "icons": [
+        "question",
+        "oreille"
+      ]
+    },
+    {
+      "id": "question_main_explorer_par_le_toucher",
+      "label": "Explorer par le toucher",
+      "category": "Personnalité + race",
+      "icons": [
+        "question",
+        "main"
+      ]
+    },
+    {
+      "id": "question_empreinte_chercher_une_piste",
+      "label": "Chercher une piste",
+      "category": "Personnalité + race",
+      "icons": [
+        "question",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "question_plume_avancer_avec_curiosite_mais_legerete",
+      "label": "Avancer avec curiosité mais légèreté",
+      "category": "Personnalité + race",
+      "icons": [
+        "question",
+        "plume"
+      ]
+    },
+    {
+      "id": "bouclier_oeil_regarder_avec_prudence",
+      "label": "Regarder avec prudence",
+      "category": "Personnalité + race",
+      "icons": [
+        "bouclier",
+        "oeil"
+      ]
+    },
+    {
+      "id": "bouclier_oreille_ecouter_en_restant_sur_ses_gardes",
+      "label": "Écouter en restant sur ses gardes",
+      "category": "Personnalité + race",
+      "icons": [
+        "bouclier",
+        "oreille"
+      ]
+    },
+    {
+      "id": "bouclier_main_toucher_avec_precaution",
+      "label": "Toucher avec précaution",
+      "category": "Personnalité + race",
+      "icons": [
+        "bouclier",
+        "main"
+      ]
+    },
+    {
+      "id": "bouclier_empreinte_avancer_prudemment",
+      "label": "Avancer prudemment",
+      "category": "Personnalité + race",
+      "icons": [
+        "bouclier",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "bouclier_plume_passer_sans_sexposer",
+      "label": "Passer sans s’exposer",
+      "category": "Personnalité + race",
+      "icons": [
+        "bouclier",
+        "plume"
+      ]
+    },
+    {
+      "id": "sablier_oeil_observer_patiemment",
+      "label": "Observer patiemment",
+      "category": "Personnalité + race",
+      "icons": [
+        "sablier",
+        "oeil"
+      ]
+    },
+    {
+      "id": "sablier_oreille_ecouter_longuement",
+      "label": "Écouter longuement",
+      "category": "Personnalité + race",
+      "icons": [
+        "sablier",
+        "oreille"
+      ]
+    },
+    {
+      "id": "sablier_main_tester_lentement",
+      "label": "Tester lentement",
+      "category": "Personnalité + race",
+      "icons": [
+        "sablier",
+        "main"
+      ]
+    },
+    {
+      "id": "sablier_empreinte_progresser_sans_se_presser",
+      "label": "Progresser sans se presser",
+      "category": "Personnalité + race",
+      "icons": [
+        "sablier",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "sablier_plume_se_deplacer_au_bon_moment",
+      "label": "Se déplacer au bon moment",
+      "category": "Personnalité + race",
+      "icons": [
+        "sablier",
+        "plume"
+      ]
+    },
+    {
+      "id": "coeur_oeil_regarder_avec_empathie",
+      "label": "Regarder avec empathie",
+      "category": "Personnalité + race",
+      "icons": [
+        "coeur",
+        "oeil"
+      ]
+    },
+    {
+      "id": "coeur_oreille_ecouter_avec_attention",
+      "label": "Écouter avec attention",
+      "category": "Personnalité + race",
+      "icons": [
+        "coeur",
+        "oreille"
+      ]
+    },
+    {
+      "id": "coeur_main_aider_par_un_geste",
+      "label": "Aider par un geste",
+      "category": "Personnalité + race",
+      "icons": [
+        "coeur",
+        "main"
+      ]
+    },
+    {
+      "id": "coeur_empreinte_aller_vers_quelquun",
+      "label": "Aller vers quelqu’un",
+      "category": "Personnalité + race",
+      "icons": [
+        "coeur",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "coeur_plume_approcher_avec_douceur",
+      "label": "Approcher avec douceur",
+      "category": "Personnalité + race",
+      "icons": [
+        "coeur",
+        "plume"
+      ]
+    },
+    {
+      "id": "fleurfanee_oeil_reperer_une_trace_oubliee",
+      "label": "Repérer une trace oubliée",
+      "category": "Personnalité + race",
+      "icons": [
+        "fleurFanee",
+        "oeil"
+      ]
+    },
+    {
+      "id": "fleurfanee_oreille_entendre_une_plainte_lointaine",
+      "label": "Entendre une plainte lointaine",
+      "category": "Personnalité + race",
+      "icons": [
+        "fleurFanee",
+        "oreille"
+      ]
+    },
+    {
+      "id": "fleurfanee_main_toucher_une_trace_du_passe",
+      "label": "Toucher une trace du passé",
+      "category": "Personnalité + race",
+      "icons": [
+        "fleurFanee",
+        "main"
+      ]
+    },
+    {
+      "id": "fleurfanee_empreinte_suivre_une_trace_ancienne",
+      "label": "Suivre une trace ancienne",
+      "category": "Personnalité + race",
+      "icons": [
+        "fleurFanee",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "fleurfanee_plume_passer_comme_un_souvenir",
+      "label": "Passer comme un souvenir",
+      "category": "Personnalité + race",
+      "icons": [
+        "fleurFanee",
+        "plume"
+      ]
+    },
+    {
+      "id": "question_pierre_questionner_la_solidite_dun_lieu",
+      "label": "Questionner la solidité d’un lieu",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "pierre"
+      ]
+    },
+    {
+      "id": "question_fissure_chercher_la_cause_dune_faiblesse",
+      "label": "Chercher la cause d’une faiblesse",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "fissure"
+      ]
+    },
+    {
+      "id": "question_symbole_interroger_un_signe",
+      "label": "Interroger un signe",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "symbole"
+      ]
+    },
+    {
+      "id": "question_echo_chercher_le_sens_dun_echo",
+      "label": "Chercher le sens d’un écho",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "echo"
+      ]
+    },
+    {
+      "id": "question_lien_comprendre_la_nature_dun_lien",
+      "label": "Comprendre la nature d’un lien",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "lien"
+      ]
+    },
+    {
+      "id": "bouclier_pierre_stabiliser_avec_prudence",
+      "label": "Stabiliser avec prudence",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "pierre"
+      ]
+    },
+    {
+      "id": "bouclier_fissure_contenir_une_rupture",
+      "label": "Contenir une rupture",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "fissure"
+      ]
+    },
+    {
+      "id": "bouclier_symbole_eviter_un_signe_dangereux",
+      "label": "Éviter un signe dangereux",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "symbole"
+      ]
+    },
+    {
+      "id": "bouclier_echo_se_proteger_dune_resonance",
+      "label": "Se protéger d’une résonance",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "echo"
+      ]
+    },
+    {
+      "id": "bouclier_lien_preserver_une_connexion",
+      "label": "Préserver une connexion",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "lien"
+      ]
+    },
+    {
+      "id": "sablier_pierre_laisser_la_pierre_repondre",
+      "label": "Laisser la pierre répondre",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "pierre"
+      ]
+    },
+    {
+      "id": "sablier_fissure_attendre_quune_fissure_se_revele",
+      "label": "Attendre qu’une fissure se révèle",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "fissure"
+      ]
+    },
+    {
+      "id": "sablier_symbole_dechiffrer_lentement_un_signe",
+      "label": "Déchiffrer lentement un signe",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "symbole"
+      ]
+    },
+    {
+      "id": "sablier_echo_ecouter_un_echo_jusquau_bout",
+      "label": "Écouter un écho jusqu’au bout",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "echo"
+      ]
+    },
+    {
+      "id": "sablier_lien_laisser_apparaitre_une_connexion",
+      "label": "Laisser apparaître une connexion",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "lien"
+      ]
+    },
+    {
+      "id": "coeur_pierre_ressentir_la_memoire_dune_pierre",
+      "label": "Ressentir la mémoire d’une pierre",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "pierre"
+      ]
+    },
+    {
+      "id": "coeur_fissure_comprendre_une_blessure_du_lieu",
+      "label": "Comprendre une blessure du lieu",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "fissure"
+      ]
+    },
+    {
+      "id": "coeur_symbole_donner_du_sens_a_un_signe",
+      "label": "Donner du sens à un signe",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "symbole"
+      ]
+    },
+    {
+      "id": "coeur_echo_repondre_a_un_echo",
+      "label": "Répondre à un écho",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "echo"
+      ]
+    },
+    {
+      "id": "coeur_lien_restaurer_une_connexion",
+      "label": "Restaurer une connexion",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "lien"
+      ]
+    },
+    {
+      "id": "fleurfanee_pierre_ressentir_lage_dune_pierre",
+      "label": "Ressentir l’âge d’une pierre",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "pierre"
+      ]
+    },
+    {
+      "id": "fleurfanee_fissure_reconnaitre_une_ancienne_fracture",
+      "label": "Reconnaître une ancienne fracture",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "fissure"
+      ]
+    },
+    {
+      "id": "fleurfanee_symbole_lire_un_signe_oublie",
+      "label": "Lire un signe oublié",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "symbole"
+      ]
+    },
+    {
+      "id": "fleurfanee_echo_entendre_un_echo_du_passe",
+      "label": "Entendre un écho du passé",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "echo"
+      ]
+    },
+    {
+      "id": "fleurfanee_lien_retrouver_un_lien_perdu",
+      "label": "Retrouver un lien perdu",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "lien"
+      ]
+    },
+    {
+      "id": "question_oeil_oeil_observer_jusqua_trouver_une_question_utile",
+      "label": "Observer jusqu’à trouver une question utile",
+      "category": "Personnalité + race",
+      "icons": [
+        "question",
+        "oeil",
+        "oeil"
+      ]
+    },
+    {
+      "id": "question_oreille_oreille_ecouter_jusqua_comprendre_le_doute",
+      "label": "Écouter jusqu’à comprendre le doute",
+      "category": "Personnalité + race",
+      "icons": [
+        "question",
+        "oreille",
+        "oreille"
+      ]
+    },
+    {
+      "id": "question_main_main_tatonner_pour_comprendre",
+      "label": "Tâtonner pour comprendre",
+      "category": "Personnalité + race",
+      "icons": [
+        "question",
+        "main",
+        "main"
+      ]
+    },
+    {
+      "id": "question_empreinte_empreinte_chercher_une_direction_incertaine",
+      "label": "Chercher une direction incertaine",
+      "category": "Personnalité + race",
+      "icons": [
+        "question",
+        "empreinte",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "question_plume_plume_approcher_un_mystere_sans_le_troubler",
+      "label": "Approcher un mystère sans le troubler",
+      "category": "Personnalité + race",
+      "icons": [
+        "question",
+        "plume",
+        "plume"
+      ]
+    },
+    {
+      "id": "bouclier_oeil_oeil_surveiller_un_danger",
+      "label": "Surveiller un danger",
+      "category": "Personnalité + race",
+      "icons": [
+        "bouclier",
+        "oeil",
+        "oeil"
+      ]
+    },
+    {
+      "id": "bouclier_oreille_oreille_guetter_un_bruit_menacant",
+      "label": "Guetter un bruit menaçant",
+      "category": "Personnalité + race",
+      "icons": [
+        "bouclier",
+        "oreille",
+        "oreille"
+      ]
+    },
+    {
+      "id": "bouclier_main_main_retenir_ou_proteger_par_la_force_des_mains",
+      "label": "Retenir ou protéger par la force des mains",
+      "category": "Personnalité + race",
+      "icons": [
+        "bouclier",
+        "main",
+        "main"
+      ]
+    },
+    {
+      "id": "bouclier_empreinte_empreinte_se_replier_rapidement",
+      "label": "Se replier rapidement",
+      "category": "Personnalité + race",
+      "icons": [
+        "bouclier",
+        "empreinte",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "bouclier_plume_plume_seffacer_avec_prudence",
+      "label": "S’effacer avec prudence",
+      "category": "Personnalité + race",
+      "icons": [
+        "bouclier",
+        "plume",
+        "plume"
+      ]
+    },
+    {
+      "id": "sablier_oeil_oeil_observer_longuement_un_detail",
+      "label": "Observer longuement un détail",
+      "category": "Personnalité + race",
+      "icons": [
+        "sablier",
+        "oeil",
+        "oeil"
+      ]
+    },
+    {
+      "id": "sablier_oreille_oreille_ecouter_dans_la_duree",
+      "label": "Écouter dans la durée",
+      "category": "Personnalité + race",
+      "icons": [
+        "sablier",
+        "oreille",
+        "oreille"
+      ]
+    },
+    {
+      "id": "sablier_main_main_tester_avec_patience",
+      "label": "Tester avec patience",
+      "category": "Personnalité + race",
+      "icons": [
+        "sablier",
+        "main",
+        "main"
+      ]
+    },
+    {
+      "id": "sablier_empreinte_empreinte_marcher_longtemps_sans_faiblir",
+      "label": "Marcher longtemps sans faiblir",
+      "category": "Personnalité + race",
+      "icons": [
+        "sablier",
+        "empreinte",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "sablier_plume_plume_attendre_linstant_exact_pour_passer",
+      "label": "Attendre l’instant exact pour passer",
+      "category": "Personnalité + race",
+      "icons": [
+        "sablier",
+        "plume",
+        "plume"
+      ]
+    },
+    {
+      "id": "coeur_oeil_oeil_chercher_un_signe_dhumanite",
+      "label": "Chercher un signe d’humanité",
+      "category": "Personnalité + race",
+      "icons": [
+        "coeur",
+        "oeil",
+        "oeil"
+      ]
+    },
+    {
+      "id": "coeur_oreille_oreille_ecouter_une_detresse",
+      "label": "Écouter une détresse",
+      "category": "Personnalité + race",
+      "icons": [
+        "coeur",
+        "oreille",
+        "oreille"
+      ]
+    },
+    {
+      "id": "coeur_main_main_soutenir_par_les_deux_mains",
+      "label": "Soutenir par les deux mains",
+      "category": "Personnalité + race",
+      "icons": [
+        "coeur",
+        "main",
+        "main"
+      ]
+    },
+    {
+      "id": "coeur_empreinte_empreinte_rejoindre_quelquun",
+      "label": "Rejoindre quelqu’un",
+      "category": "Personnalité + race",
+      "icons": [
+        "coeur",
+        "empreinte",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "coeur_plume_plume_approcher_sans_effrayer",
+      "label": "Approcher sans effrayer",
+      "category": "Personnalité + race",
+      "icons": [
+        "coeur",
+        "plume",
+        "plume"
+      ]
+    },
+    {
+      "id": "fleurfanee_oeil_oeil_voir_ce_qui_a_disparu",
+      "label": "Voir ce qui a disparu",
+      "category": "Personnalité + race",
+      "icons": [
+        "fleurFanee",
+        "oeil",
+        "oeil"
+      ]
+    },
+    {
+      "id": "fleurfanee_oreille_oreille_ecouter_une_absence",
+      "label": "Écouter une absence",
+      "category": "Personnalité + race",
+      "icons": [
+        "fleurFanee",
+        "oreille",
+        "oreille"
+      ]
+    },
+    {
+      "id": "fleurfanee_main_main_tenir_une_relique_avec_emotion",
+      "label": "Tenir une relique avec émotion",
+      "category": "Personnalité + race",
+      "icons": [
+        "fleurFanee",
+        "main",
+        "main"
+      ]
+    },
+    {
+      "id": "fleurfanee_empreinte_empreinte_suivre_une_ancienne_route",
+      "label": "Suivre une ancienne route",
+      "category": "Personnalité + race",
+      "icons": [
+        "fleurFanee",
+        "empreinte",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "fleurfanee_plume_plume_traverser_un_lieu_comme_un_fantome",
+      "label": "Traverser un lieu comme un fantôme",
+      "category": "Personnalité + race",
+      "icons": [
+        "fleurFanee",
+        "plume",
+        "plume"
+      ]
+    },
+    {
+      "id": "question_oeil_main_observer_et_toucher_avec_curiosite",
+      "label": "Observer et toucher avec curiosité",
+      "category": "Personnalité + race",
+      "icons": [
+        "question",
+        "oeil",
+        "main"
+      ]
+    },
+    {
+      "id": "question_oreille_empreinte_ecouter_puis_avancer_vers_linconnu",
+      "label": "Écouter puis avancer vers l’inconnu",
+      "category": "Personnalité + race",
+      "icons": [
+        "question",
+        "oreille",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "question_oeil_plume_approcher_une_decouverte_sans_bruit",
+      "label": "Approcher une découverte sans bruit",
+      "category": "Personnalité + race",
+      "icons": [
+        "question",
+        "oeil",
+        "plume"
+      ]
+    },
+    {
+      "id": "bouclier_oeil_empreinte_voir_puis_se_mettre_a_labri",
+      "label": "Voir puis se mettre à l’abri",
+      "category": "Personnalité + race",
+      "icons": [
+        "bouclier",
+        "oeil",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "bouclier_main_plume_toucher_sans_prendre_de_risque",
+      "label": "Toucher sans prendre de risque",
+      "category": "Personnalité + race",
+      "icons": [
+        "bouclier",
+        "main",
+        "plume"
+      ]
+    },
+    {
+      "id": "sablier_oeil_oreille_attendre_en_observant_et_ecoutant",
+      "label": "Attendre en observant et écoutant",
+      "category": "Personnalité + race",
+      "icons": [
+        "sablier",
+        "oeil",
+        "oreille"
+      ]
+    },
+    {
+      "id": "sablier_empreinte_plume_avancer_au_rythme_juste",
+      "label": "Avancer au rythme juste",
+      "category": "Personnalité + race",
+      "icons": [
+        "sablier",
+        "empreinte",
+        "plume"
+      ]
+    },
+    {
+      "id": "coeur_main_plume_tendre_la_main_avec_douceur",
+      "label": "Tendre la main avec douceur",
+      "category": "Personnalité + race",
+      "icons": [
+        "coeur",
+        "main",
+        "plume"
+      ]
+    },
+    {
+      "id": "coeur_oreille_empreinte_chercher_quelquun_en_ecoutant_ses_traces",
+      "label": "Chercher quelqu’un en écoutant ses traces",
+      "category": "Personnalité + race",
+      "icons": [
+        "coeur",
+        "oreille",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "fleurfanee_oeil_empreinte_suivre_une_trace_melancolique",
+      "label": "Suivre une trace mélancolique",
+      "category": "Personnalité + race",
+      "icons": [
+        "fleurFanee",
+        "oeil",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "fleurfanee_main_plume_toucher_un_souvenir_sans_le_brusquer",
+      "label": "Toucher un souvenir sans le brusquer",
+      "category": "Personnalité + race",
+      "icons": [
+        "fleurFanee",
+        "main",
+        "plume"
+      ]
+    },
+    {
+      "id": "question_pierre_fissure_comprendre_pourquoi_une_structure_cede",
+      "label": "Comprendre pourquoi une structure cède",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "pierre",
+        "fissure"
+      ]
+    },
+    {
+      "id": "question_pierre_symbole_interroger_une_inscription_gravee",
+      "label": "Interroger une inscription gravée",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "pierre",
+        "symbole"
+      ]
+    },
+    {
+      "id": "question_pierre_echo_questionner_une_resonance_dans_la_pierre",
+      "label": "Questionner une résonance dans la pierre",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "pierre",
+        "echo"
+      ]
+    },
+    {
+      "id": "question_pierre_lien_comprendre_ce_qui_relie_une_structure",
+      "label": "Comprendre ce qui relie une structure",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "pierre",
+        "lien"
+      ]
+    },
+    {
+      "id": "question_fissure_symbole_chercher_le_sens_dun_signe_brise",
+      "label": "Chercher le sens d’un signe brisé",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "fissure",
+        "symbole"
+      ]
+    },
+    {
+      "id": "question_fissure_echo_questionner_une_faille_qui_resonne",
+      "label": "Questionner une faille qui résonne",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "fissure",
+        "echo"
+      ]
+    },
+    {
+      "id": "question_fissure_lien_comprendre_pourquoi_un_lien_est_rompu",
+      "label": "Comprendre pourquoi un lien est rompu",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "fissure",
+        "lien"
+      ]
+    },
+    {
+      "id": "question_symbole_echo_interroger_un_symbole_par_resonance",
+      "label": "Interroger un symbole par résonance",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "symbole",
+        "echo"
+      ]
+    },
+    {
+      "id": "question_symbole_lien_chercher_le_lien_entre_plusieurs_signes",
+      "label": "Chercher le lien entre plusieurs signes",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "symbole",
+        "lien"
+      ]
+    },
+    {
+      "id": "question_echo_lien_comprendre_une_resonance_liee",
+      "label": "Comprendre une résonance liée",
+      "category": "Personnalité + classe",
+      "icons": [
+        "question",
+        "echo",
+        "lien"
+      ]
+    },
+    {
+      "id": "bouclier_pierre_fissure_securiser_une_structure_fragile",
+      "label": "Sécuriser une structure fragile",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "pierre",
+        "fissure"
+      ]
+    },
+    {
+      "id": "bouclier_pierre_symbole_proteger_une_inscription_gravee",
+      "label": "Protéger une inscription gravée",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "pierre",
+        "symbole"
+      ]
+    },
+    {
+      "id": "bouclier_pierre_echo_amortir_une_resonance_dangereuse",
+      "label": "Amortir une résonance dangereuse",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "pierre",
+        "echo"
+      ]
+    },
+    {
+      "id": "bouclier_pierre_lien_preserver_un_point_de_soutien",
+      "label": "Préserver un point de soutien",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "pierre",
+        "lien"
+      ]
+    },
+    {
+      "id": "bouclier_fissure_symbole_empecher_un_signe_brise_de_sactiver",
+      "label": "Empêcher un signe brisé de s’activer",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "fissure",
+        "symbole"
+      ]
+    },
+    {
+      "id": "bouclier_fissure_echo_contenir_une_faille_resonante",
+      "label": "Contenir une faille résonante",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "fissure",
+        "echo"
+      ]
+    },
+    {
+      "id": "bouclier_fissure_lien_isoler_un_lien_fragilise",
+      "label": "Isoler un lien fragilisé",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "fissure",
+        "lien"
+      ]
+    },
+    {
+      "id": "bouclier_symbole_echo_se_proteger_dun_symbole_qui_repond",
+      "label": "Se protéger d’un symbole qui répond",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "symbole",
+        "echo"
+      ]
+    },
+    {
+      "id": "bouclier_symbole_lien_preserver_une_chaine_de_signes",
+      "label": "Préserver une chaîne de signes",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "symbole",
+        "lien"
+      ]
+    },
+    {
+      "id": "bouclier_echo_lien_empecher_une_resonance_de_se_propager",
+      "label": "Empêcher une résonance de se propager",
+      "category": "Personnalité + classe",
+      "icons": [
+        "bouclier",
+        "echo",
+        "lien"
+      ]
+    },
+    {
+      "id": "sablier_pierre_fissure_laisser_une_faiblesse_se_reveler",
+      "label": "Laisser une faiblesse se révéler",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "pierre",
+        "fissure"
+      ]
+    },
+    {
+      "id": "sablier_pierre_symbole_dechiffrer_patiemment_une_inscription",
+      "label": "Déchiffrer patiemment une inscription",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "pierre",
+        "symbole"
+      ]
+    },
+    {
+      "id": "sablier_pierre_echo_attendre_la_reponse_dune_pierre",
+      "label": "Attendre la réponse d’une pierre",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "pierre",
+        "echo"
+      ]
+    },
+    {
+      "id": "sablier_pierre_lien_observer_lentement_un_soutien_cache",
+      "label": "Observer lentement un soutien caché",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "pierre",
+        "lien"
+      ]
+    },
+    {
+      "id": "sablier_fissure_symbole_attendre_quun_signe_brise_parle",
+      "label": "Attendre qu’un signe brisé parle",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "fissure",
+        "symbole"
+      ]
+    },
+    {
+      "id": "sablier_fissure_echo_ecouter_longuement_une_breche",
+      "label": "Écouter longuement une brèche",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "fissure",
+        "echo"
+      ]
+    },
+    {
+      "id": "sablier_fissure_lien_laisser_apparaitre_une_rupture_de_lien",
+      "label": "Laisser apparaître une rupture de lien",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "fissure",
+        "lien"
+      ]
+    },
+    {
+      "id": "sablier_symbole_echo_attendre_quun_symbole_resonne",
+      "label": "Attendre qu’un symbole résonne",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "symbole",
+        "echo"
+      ]
+    },
+    {
+      "id": "sablier_symbole_lien_reconstituer_lentement_une_chaine_de_signes",
+      "label": "Reconstituer lentement une chaîne de signes",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "symbole",
+        "lien"
+      ]
+    },
+    {
+      "id": "sablier_echo_lien_suivre_une_resonance_jusqua_sa_source",
+      "label": "Suivre une résonance jusqu’à sa source",
+      "category": "Personnalité + classe",
+      "icons": [
+        "sablier",
+        "echo",
+        "lien"
+      ]
+    },
+    {
+      "id": "coeur_pierre_fissure_ressentir_la_blessure_dune_structure",
+      "label": "Ressentir la blessure d’une structure",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "pierre",
+        "fissure"
+      ]
+    },
+    {
+      "id": "coeur_pierre_symbole_donner_un_sens_humain_a_une_inscription",
+      "label": "Donner un sens humain à une inscription",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "pierre",
+        "symbole"
+      ]
+    },
+    {
+      "id": "coeur_pierre_echo_repondre_a_la_memoire_dune_pierre",
+      "label": "Répondre à la mémoire d’une pierre",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "pierre",
+        "echo"
+      ]
+    },
+    {
+      "id": "coeur_pierre_lien_rattacher_ce_qui_soutient_encore",
+      "label": "Rattacher ce qui soutient encore",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "pierre",
+        "lien"
+      ]
+    },
+    {
+      "id": "coeur_fissure_symbole_comprendre_la_peine_dun_signe_brise",
+      "label": "Comprendre la peine d’un signe brisé",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "fissure",
+        "symbole"
+      ]
+    },
+    {
+      "id": "coeur_fissure_echo_repondre_a_une_faille_qui_appelle",
+      "label": "Répondre à une faille qui appelle",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "fissure",
+        "echo"
+      ]
+    },
+    {
+      "id": "coeur_fissure_lien_reparer_symboliquement_un_lien_rompu",
+      "label": "Réparer symboliquement un lien rompu",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "fissure",
+        "lien"
+      ]
+    },
+    {
+      "id": "coeur_symbole_echo_donner_une_reponse_a_un_symbole",
+      "label": "Donner une réponse à un symbole",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "symbole",
+        "echo"
+      ]
+    },
+    {
+      "id": "coeur_symbole_lien_relier_des_signes_par_leur_sens",
+      "label": "Relier des signes par leur sens",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "symbole",
+        "lien"
+      ]
+    },
+    {
+      "id": "coeur_echo_lien_repondre_a_un_appel_lie",
+      "label": "Répondre à un appel lié",
+      "category": "Personnalité + classe",
+      "icons": [
+        "coeur",
+        "echo",
+        "lien"
+      ]
+    },
+    {
+      "id": "fleurfanee_pierre_fissure_ressentir_une_ancienne_rupture",
+      "label": "Ressentir une ancienne rupture",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "pierre",
+        "fissure"
+      ]
+    },
+    {
+      "id": "fleurfanee_pierre_symbole_lire_une_inscription_oubliee",
+      "label": "Lire une inscription oubliée",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "pierre",
+        "symbole"
+      ]
+    },
+    {
+      "id": "fleurfanee_pierre_echo_entendre_la_memoire_dune_pierre",
+      "label": "Entendre la mémoire d’une pierre",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "pierre",
+        "echo"
+      ]
+    },
+    {
+      "id": "fleurfanee_pierre_lien_retrouver_un_ancien_soutien",
+      "label": "Retrouver un ancien soutien",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "pierre",
+        "lien"
+      ]
+    },
+    {
+      "id": "fleurfanee_fissure_symbole_reconnaitre_un_sceau_brise",
+      "label": "Reconnaître un sceau brisé",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "fissure",
+        "symbole"
+      ]
+    },
+    {
+      "id": "fleurfanee_fissure_echo_entendre_une_breche_ancienne",
+      "label": "Entendre une brèche ancienne",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "fissure",
+        "echo"
+      ]
+    },
+    {
+      "id": "fleurfanee_fissure_lien_retrouver_une_connexion_perdue",
+      "label": "Retrouver une connexion perdue",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "fissure",
+        "lien"
+      ]
+    },
+    {
+      "id": "fleurfanee_symbole_echo_reveiller_un_symbole_oublie",
+      "label": "Réveiller un symbole oublié",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "symbole",
+        "echo"
+      ]
+    },
+    {
+      "id": "fleurfanee_symbole_lien_relier_des_signes_anciens",
+      "label": "Relier des signes anciens",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "symbole",
+        "lien"
+      ]
+    },
+    {
+      "id": "fleurfanee_echo_lien_suivre_lecho_dun_lien_perdu",
+      "label": "Suivre l’écho d’un lien perdu",
+      "category": "Personnalité + classe",
+      "icons": [
+        "fleurFanee",
+        "echo",
+        "lien"
+      ]
+    },
+    {
+      "id": "question_bouclier_pierre_questionner_prudemment_la_pierre",
+      "label": "Questionner prudemment la pierre",
+      "category": "Personnalité mixte",
+      "icons": [
+        "question",
+        "bouclier",
+        "pierre"
+      ]
+    },
+    {
+      "id": "question_bouclier_fissure_questionner_prudemment_une_faille",
+      "label": "Questionner prudemment une faille",
+      "category": "Personnalité mixte",
+      "icons": [
+        "question",
+        "bouclier",
+        "fissure"
+      ]
+    },
+    {
+      "id": "question_bouclier_symbole_questionner_prudemment_un_signe",
+      "label": "Questionner prudemment un signe",
+      "category": "Personnalité mixte",
+      "icons": [
+        "question",
+        "bouclier",
+        "symbole"
+      ]
+    },
+    {
+      "id": "question_bouclier_echo_questionner_prudemment_un_echo",
+      "label": "Questionner prudemment un écho",
+      "category": "Personnalité mixte",
+      "icons": [
+        "question",
+        "bouclier",
+        "echo"
+      ]
+    },
+    {
+      "id": "question_bouclier_lien_questionner_prudemment_un_lien",
+      "label": "Questionner prudemment un lien",
+      "category": "Personnalité mixte",
+      "icons": [
+        "question",
+        "bouclier",
+        "lien"
+      ]
+    },
+    {
+      "id": "question_fleurfanee_oeil_comprendre_une_trace_ancienne",
+      "label": "Comprendre une trace ancienne",
+      "category": "Personnalité mixte",
+      "icons": [
+        "question",
+        "fleurFanee",
+        "oeil"
+      ]
+    },
+    {
+      "id": "question_fleurfanee_oreille_ecouter_une_memoire_ancienne",
+      "label": "Écouter une mémoire ancienne",
+      "category": "Personnalité mixte",
+      "icons": [
+        "question",
+        "fleurFanee",
+        "oreille"
+      ]
+    },
+    {
+      "id": "bouclier_fleurfanee_main_toucher_une_trace_avec_retenue",
+      "label": "Toucher une trace avec retenue",
+      "category": "Personnalité mixte",
+      "icons": [
+        "bouclier",
+        "fleurFanee",
+        "main"
+      ]
+    },
+    {
+      "id": "sablier_coeur_oreille_attendre_que_lemotion_passe",
+      "label": "Attendre que l’émotion passe",
+      "category": "Personnalité mixte",
+      "icons": [
+        "sablier",
+        "coeur",
+        "oreille"
+      ]
+    },
+    {
+      "id": "bouclier_coeur_main_proteger_quelquun_avec_douceur",
+      "label": "Protéger quelqu’un avec douceur",
+      "category": "Personnalité mixte",
+      "icons": [
+        "bouclier",
+        "coeur",
+        "main"
+      ]
+    },
+    {
+      "id": "bouclier_fleurfanee_empreinte_avancer_malgre_un_souvenir_douloureux",
+      "label": "Avancer malgré un souvenir douloureux",
+      "category": "Personnalité mixte",
+      "icons": [
+        "bouclier",
+        "fleurFanee",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "coeur_fleurfanee_plume_approcher_un_souvenir_fragile",
+      "label": "Approcher un souvenir fragile",
+      "category": "Personnalité mixte",
+      "icons": [
+        "coeur",
+        "fleurFanee",
+        "plume"
+      ]
+    },
+    {
+      "id": "question_pierre_oeil_examiner_une_structure_en_cherchant_son_sens",
+      "label": "Examiner une structure en cherchant son sens",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "question",
+        "pierre",
+        "oeil"
+      ]
+    },
+    {
+      "id": "question_fissure_main_tester_une_faille_pour_comprendre",
+      "label": "Tester une faille pour comprendre",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "question",
+        "fissure",
+        "main"
+      ]
+    },
+    {
+      "id": "question_symbole_oeil_lire_un_signe_comme_une_enigme",
+      "label": "Lire un signe comme une énigme",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "question",
+        "symbole",
+        "oeil"
+      ]
+    },
+    {
+      "id": "question_echo_oreille_ecouter_un_echo_pour_en_trouver_la_source",
+      "label": "Écouter un écho pour en trouver la source",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "question",
+        "echo",
+        "oreille"
+      ]
+    },
+    {
+      "id": "question_lien_empreinte_suivre_une_connexion_incertaine",
+      "label": "Suivre une connexion incertaine",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "question",
+        "lien",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "bouclier_pierre_main_tester_une_structure_sans_danger",
+      "label": "Tester une structure sans danger",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "bouclier",
+        "pierre",
+        "main"
+      ]
+    },
+    {
+      "id": "bouclier_fissure_empreinte_traverser_une_faille_prudemment",
+      "label": "Traverser une faille prudemment",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "bouclier",
+        "fissure",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "bouclier_symbole_plume_approcher_un_signe_dangereux_sans_le_declencher",
+      "label": "Approcher un signe dangereux sans le déclencher",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "bouclier",
+        "symbole",
+        "plume"
+      ]
+    },
+    {
+      "id": "bouclier_echo_oreille_ecouter_un_echo_menacant_a_distance",
+      "label": "Écouter un écho menaçant à distance",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "bouclier",
+        "echo",
+        "oreille"
+      ]
+    },
+    {
+      "id": "bouclier_lien_main_toucher_un_lien_sans_le_rompre",
+      "label": "Toucher un lien sans le rompre",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "bouclier",
+        "lien",
+        "main"
+      ]
+    },
+    {
+      "id": "sablier_pierre_oeil_observer_une_pierre_jusqua_percevoir_sa_reponse",
+      "label": "Observer une pierre jusqu’à percevoir sa réponse",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "sablier",
+        "pierre",
+        "oeil"
+      ]
+    },
+    {
+      "id": "sablier_fissure_oeil_attendre_quune_faille_se_revele",
+      "label": "Attendre qu’une faille se révèle",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "sablier",
+        "fissure",
+        "oeil"
+      ]
+    },
+    {
+      "id": "sablier_symbole_oeil_dechiffrer_un_signe_lentement",
+      "label": "Déchiffrer un signe lentement",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "sablier",
+        "symbole",
+        "oeil"
+      ]
+    },
+    {
+      "id": "sablier_echo_oreille_ecouter_un_echo_jusqua_son_extinction",
+      "label": "Écouter un écho jusqu’à son extinction",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "sablier",
+        "echo",
+        "oreille"
+      ]
+    },
+    {
+      "id": "sablier_lien_empreinte_suivre_un_lien_au_rythme_juste",
+      "label": "Suivre un lien au rythme juste",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "sablier",
+        "lien",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "coeur_pierre_main_sentir_la_memoire_dune_pierre_au_toucher",
+      "label": "Sentir la mémoire d’une pierre au toucher",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "coeur",
+        "pierre",
+        "main"
+      ]
+    },
+    {
+      "id": "coeur_fissure_oeil_comprendre_la_blessure_dune_faille",
+      "label": "Comprendre la blessure d’une faille",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "coeur",
+        "fissure",
+        "oeil"
+      ]
+    },
+    {
+      "id": "coeur_symbole_oeil_donner_du_sens_a_un_signe_visible",
+      "label": "Donner du sens à un signe visible",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "coeur",
+        "symbole",
+        "oeil"
+      ]
+    },
+    {
+      "id": "coeur_echo_oreille_repondre_doucement_a_un_echo",
+      "label": "Répondre doucement à un écho",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "coeur",
+        "echo",
+        "oreille"
+      ]
+    },
+    {
+      "id": "coeur_lien_main_renouer_un_lien_avec_douceur",
+      "label": "Renouer un lien avec douceur",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "coeur",
+        "lien",
+        "main"
+      ]
+    },
+    {
+      "id": "fleurfanee_pierre_oeil_voir_lage_ancien_dune_structure",
+      "label": "Voir l’âge ancien d’une structure",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "fleurFanee",
+        "pierre",
+        "oeil"
+      ]
+    },
+    {
+      "id": "fleurfanee_fissure_main_toucher_une_ancienne_fracture",
+      "label": "Toucher une ancienne fracture",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "fleurFanee",
+        "fissure",
+        "main"
+      ]
+    },
+    {
+      "id": "fleurfanee_symbole_oeil_lire_un_signe_oublie",
+      "label": "Lire un signe oublié",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "fleurFanee",
+        "symbole",
+        "oeil"
+      ]
+    },
+    {
+      "id": "fleurfanee_echo_oreille_ecouter_un_echo_du_passe",
+      "label": "Écouter un écho du passé",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "fleurFanee",
+        "echo",
+        "oreille"
+      ]
+    },
+    {
+      "id": "fleurfanee_lien_empreinte_suivre_la_trace_dun_lien_perdu",
+      "label": "Suivre la trace d’un lien perdu",
+      "category": "Personnalité + classe + race",
+      "icons": [
+        "fleurFanee",
+        "lien",
+        "empreinte"
       ]
     }
   ]
