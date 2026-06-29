@@ -1,178 +1,178 @@
 {
-  "version": 3,
-  "scope": "race_actions_only",
-  "note": "Actions gérées par JSON. L'ordre du tableau est l'ordre d'affichage ; aucun champ order n'est utilisé.",
+  "version": 4,
+  "scope": "race_and_class",
+  "note": "Actions liées aux icônes de race et de classe. Pas de champ order : l'ordre du tableau sert d'ordre d'affichage.",
   "actions": [
     {
-      "id": "regarder",
+      "id": "oeil_regarder",
       "label": "Regarder",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "oeil"
       ]
     },
     {
-      "id": "ecouter",
+      "id": "oreille_ecouter",
       "label": "Écouter",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "oreille"
       ]
     },
     {
-      "id": "toucher",
+      "id": "main_toucher_palper",
       "label": "Toucher / palper",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "main"
       ]
     },
     {
-      "id": "marcher",
+      "id": "empreinte_marcher",
       "label": "Marcher",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "empreinte"
       ]
     },
     {
-      "id": "sauter",
+      "id": "plume_sauter",
       "label": "Sauter",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "plume"
       ]
     },
     {
-      "id": "observer_attentivement",
+      "id": "oeil_oeil_observer_attentivement",
       "label": "Observer attentivement",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "oeil",
         "oeil"
       ]
     },
     {
-      "id": "ecouter_attentivement",
+      "id": "oreille_oreille_ecouter_attentivement",
       "label": "Écouter attentivement",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "oreille",
         "oreille"
       ]
     },
     {
-      "id": "sentir_presence",
+      "id": "oeil_oreille_sentir_une_presence_proche",
       "label": "Sentir une présence proche",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "oeil",
         "oreille"
       ]
     },
     {
-      "id": "chercher_visuellement",
+      "id": "oeil_main_chercher_visuellement",
       "label": "Chercher visuellement",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "oeil",
         "main"
       ]
     },
     {
-      "id": "fouiller_tatons",
+      "id": "main_main_fouiller_a_tatons",
       "label": "Fouiller à tâtons",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "main",
         "main"
       ]
     },
     {
-      "id": "estimer_distance",
+      "id": "oeil_empreinte_estimer_une_distance",
       "label": "Estimer une distance",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "oeil",
         "empreinte"
       ]
     },
     {
-      "id": "suivre_regard",
+      "id": "oeil_plume_suivre_du_regard",
       "label": "Suivre du regard",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "oeil",
         "plume"
       ]
     },
     {
-      "id": "suivre_bruit",
+      "id": "oreille_empreinte_suivre_un_bruit",
       "label": "Suivre un bruit",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "oreille",
         "empreinte"
       ]
     },
     {
-      "id": "approcher_sans_bruit",
+      "id": "oreille_plume_approcher_sans_bruit",
       "label": "Approcher sans bruit",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "oreille",
         "plume"
       ]
     },
     {
-      "id": "grimper",
+      "id": "main_empreinte_grimper",
       "label": "Grimper",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "main",
         "empreinte"
       ]
     },
     {
-      "id": "se_hisser",
+      "id": "main_plume_se_hisser",
       "label": "Se hisser",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "main",
         "plume"
       ]
     },
     {
-      "id": "courir",
+      "id": "empreinte_empreinte_courir",
       "label": "Courir",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "empreinte",
         "empreinte"
       ]
     },
     {
-      "id": "avancer_discretement",
+      "id": "empreinte_plume_avancer_discretement",
       "label": "Avancer discrètement",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "empreinte",
         "plume"
       ]
     },
     {
-      "id": "bondir",
+      "id": "plume_plume_bondir",
       "label": "Bondir",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "plume",
         "plume"
       ]
     },
     {
-      "id": "reagir_vite",
+      "id": "oeil_oreille_main_reagir_vite",
       "label": "Réagir vite",
-      "category": "Réaction",
+      "category": "Race",
       "icons": [
         "oeil",
         "oreille",
@@ -180,9 +180,9 @@
       ]
     },
     {
-      "id": "avancer_prudemment",
+      "id": "oeil_oreille_empreinte_avancer_prudemment",
       "label": "Avancer prudemment",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "oeil",
         "oreille",
@@ -190,9 +190,9 @@
       ]
     },
     {
-      "id": "eviter_attention",
+      "id": "oeil_oreille_plume_eviter_l_attention",
       "label": "Éviter l'attention",
-      "category": "Discrétion",
+      "category": "Race",
       "icons": [
         "oeil",
         "oreille",
@@ -200,9 +200,9 @@
       ]
     },
     {
-      "id": "percevoir_detail",
+      "id": "oeil_oeil_main_percevoir_un_detail",
       "label": "Percevoir un détail",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "oeil",
         "oeil",
@@ -210,9 +210,9 @@
       ]
     },
     {
-      "id": "poursuivre",
+      "id": "oeil_empreinte_empreinte_poursuivre",
       "label": "Poursuivre",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "oeil",
         "empreinte",
@@ -220,9 +220,9 @@
       ]
     },
     {
-      "id": "contourner",
+      "id": "oeil_empreinte_plume_contourner",
       "label": "Contourner",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "oeil",
         "empreinte",
@@ -230,9 +230,9 @@
       ]
     },
     {
-      "id": "percevoir_mouvement",
+      "id": "oeil_plume_plume_percevoir_un_mouvement",
       "label": "Percevoir un mouvement",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "oeil",
         "plume",
@@ -240,9 +240,9 @@
       ]
     },
     {
-      "id": "percevoir_son_faible",
+      "id": "oreille_oreille_oeil_percevoir_un_son_faible",
       "label": "Percevoir un son faible",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "oreille",
         "oreille",
@@ -250,9 +250,9 @@
       ]
     },
     {
-      "id": "reperer_direction_sonore",
+      "id": "oreille_oreille_empreinte_reperer_une_direction_sonore",
       "label": "Repérer une direction sonore",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "oreille",
         "oreille",
@@ -260,9 +260,9 @@
       ]
     },
     {
-      "id": "rester_immobile",
+      "id": "oreille_oreille_plume_rester_immobile_retenir_son_souffle",
       "label": "Rester immobile / retenir son souffle",
-      "category": "Discrétion",
+      "category": "Race",
       "icons": [
         "oreille",
         "oreille",
@@ -270,9 +270,9 @@
       ]
     },
     {
-      "id": "se_deplacer_aveugle",
+      "id": "oreille_main_empreinte_se_deplacer_a_l_aveugle",
       "label": "Se déplacer à l'aveugle",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "oreille",
         "main",
@@ -280,9 +280,9 @@
       ]
     },
     {
-      "id": "reculer",
+      "id": "oreille_empreinte_plume_reculer",
       "label": "Reculer",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "oreille",
         "empreinte",
@@ -290,9 +290,9 @@
       ]
     },
     {
-      "id": "inspecter_surface",
+      "id": "main_main_oeil_inspecter_une_surface",
       "label": "Inspecter une surface",
-      "category": "Perception",
+      "category": "Race",
       "icons": [
         "main",
         "main",
@@ -300,9 +300,9 @@
       ]
     },
     {
-      "id": "tester_prise",
+      "id": "main_main_empreinte_tester_une_prise_un_appui",
       "label": "Tester une prise / un appui",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "main",
         "main",
@@ -310,9 +310,9 @@
       ]
     },
     {
-      "id": "atterrir_souplement",
+      "id": "main_main_plume_atterrir_souplement",
       "label": "Atterrir souplement",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "main",
         "main",
@@ -320,9 +320,9 @@
       ]
     },
     {
-      "id": "ramper",
+      "id": "main_empreinte_empreinte_ramper",
       "label": "Ramper",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "main",
         "empreinte",
@@ -330,9 +330,9 @@
       ]
     },
     {
-      "id": "se_glisser",
+      "id": "main_empreinte_plume_se_glisser_dans_un_passage_etroit",
       "label": "Se glisser dans un passage étroit",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "main",
         "empreinte",
@@ -340,9 +340,9 @@
       ]
     },
     {
-      "id": "se_faufiler",
+      "id": "main_plume_plume_se_faufiler",
       "label": "Se faufiler",
-      "category": "Discrétion",
+      "category": "Race",
       "icons": [
         "main",
         "plume",
@@ -350,9 +350,9 @@
       ]
     },
     {
-      "id": "fuir",
+      "id": "empreinte_empreinte_plume_fuir",
       "label": "Fuir",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "empreinte",
         "empreinte",
@@ -360,13 +360,1933 @@
       ]
     },
     {
-      "id": "franchir_obstacle",
+      "id": "empreinte_plume_plume_franchir_un_obstacle_avec_agilite",
       "label": "Franchir un obstacle avec agilité",
-      "category": "Déplacement",
+      "category": "Race",
       "icons": [
         "empreinte",
         "plume",
         "plume"
+      ]
+    },
+    {
+      "id": "pierre_sentir_la_solidite_dun_lieu",
+      "label": "Sentir la solidité d’un lieu",
+      "category": "Classe",
+      "icons": [
+        "pierre"
+      ]
+    },
+    {
+      "id": "fissure_trouver_une_faiblesse",
+      "label": "Trouver une faiblesse",
+      "category": "Classe",
+      "icons": [
+        "fissure"
+      ]
+    },
+    {
+      "id": "symbole_comprendre_un_signe",
+      "label": "Comprendre un signe",
+      "category": "Classe",
+      "icons": [
+        "symbole"
+      ]
+    },
+    {
+      "id": "echo_faire_resonner_le_lieu",
+      "label": "Faire résonner le lieu",
+      "category": "Classe",
+      "icons": [
+        "echo"
+      ]
+    },
+    {
+      "id": "lien_comprendre_une_connexion",
+      "label": "Comprendre une connexion",
+      "category": "Classe",
+      "icons": [
+        "lien"
+      ]
+    },
+    {
+      "id": "pierre_pierre_stabiliser_ou_resister_a_une_pression",
+      "label": "Stabiliser ou résister à une pression",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "pierre"
+      ]
+    },
+    {
+      "id": "pierre_fissure_trouver_le_point_fragile_dune_structure",
+      "label": "Trouver le point fragile d’une structure",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "fissure"
+      ]
+    },
+    {
+      "id": "pierre_symbole_identifier_une_marque_gravee_ou_ancienne",
+      "label": "Identifier une marque gravée ou ancienne",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "symbole"
+      ]
+    },
+    {
+      "id": "pierre_echo_sonder_un_espace_creux_ou_cache",
+      "label": "Sonder un espace creux ou caché",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "echo"
+      ]
+    },
+    {
+      "id": "pierre_lien_comprendre_ce_qui_soutient_ou_relie_une_structure",
+      "label": "Comprendre ce qui soutient ou relie une structure",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "lien"
+      ]
+    },
+    {
+      "id": "fissure_fissure_agrandir_exploiter_ou_provoquer_une_rupture",
+      "label": "Agrandir, exploiter ou provoquer une rupture",
+      "category": "Classe",
+      "icons": [
+        "fissure",
+        "fissure"
+      ]
+    },
+    {
+      "id": "fissure_symbole_comprendre_un_signe_abime",
+      "label": "Comprendre un signe abîmé",
+      "category": "Classe",
+      "icons": [
+        "fissure",
+        "symbole"
+      ]
+    },
+    {
+      "id": "fissure_echo_faire_parler_une_faille_par_resonance",
+      "label": "Faire parler une faille par résonance",
+      "category": "Classe",
+      "icons": [
+        "fissure",
+        "echo"
+      ]
+    },
+    {
+      "id": "fissure_lien_rompre_ou_isoler_une_connexion_fragile",
+      "label": "Rompre ou isoler une connexion fragile",
+      "category": "Classe",
+      "icons": [
+        "fissure",
+        "lien"
+      ]
+    },
+    {
+      "id": "symbole_symbole_dechiffrer_un_message_complexe",
+      "label": "Déchiffrer un message complexe",
+      "category": "Classe",
+      "icons": [
+        "symbole",
+        "symbole"
+      ]
+    },
+    {
+      "id": "symbole_echo_activer_ou_interroger_un_signe",
+      "label": "Activer ou interroger un signe",
+      "category": "Classe",
+      "icons": [
+        "symbole",
+        "echo"
+      ]
+    },
+    {
+      "id": "symbole_lien_relier_plusieurs_signes_entre_eux",
+      "label": "Relier plusieurs signes entre eux",
+      "category": "Classe",
+      "icons": [
+        "symbole",
+        "lien"
+      ]
+    },
+    {
+      "id": "echo_echo_obtenir_une_reponse_nette_du_lieu",
+      "label": "Obtenir une réponse nette du lieu",
+      "category": "Classe",
+      "icons": [
+        "echo",
+        "echo"
+      ]
+    },
+    {
+      "id": "echo_lien_transmettre_une_resonance_dun_point_a_un_autre",
+      "label": "Transmettre une résonance d’un point à un autre",
+      "category": "Classe",
+      "icons": [
+        "echo",
+        "lien"
+      ]
+    },
+    {
+      "id": "lien_lien_comprendre_un_reseau_cache",
+      "label": "Comprendre un réseau caché",
+      "category": "Classe",
+      "icons": [
+        "lien",
+        "lien"
+      ]
+    },
+    {
+      "id": "pierre_oeil_examiner_une_structure",
+      "label": "Examiner une structure",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "oeil"
+      ]
+    },
+    {
+      "id": "pierre_oreille_entendre_une_vibration_dans_la_matiere",
+      "label": "Entendre une vibration dans la matière",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "oreille"
+      ]
+    },
+    {
+      "id": "pierre_main_tester_la_solidite",
+      "label": "Tester la solidité",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "main"
+      ]
+    },
+    {
+      "id": "pierre_empreinte_trouver_un_appui_sur",
+      "label": "Trouver un appui sûr",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "pierre_plume_passer_legerement_sur_une_zone_fragile",
+      "label": "Passer légèrement sur une zone fragile",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "plume"
+      ]
+    },
+    {
+      "id": "fissure_oeil_reperer_une_faille",
+      "label": "Repérer une faille",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "oeil"
+      ]
+    },
+    {
+      "id": "fissure_oreille_entendre_un_craquement_suspect",
+      "label": "Entendre un craquement suspect",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "oreille"
+      ]
+    },
+    {
+      "id": "fissure_main_tester_une_faille",
+      "label": "Tester une faille",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "main"
+      ]
+    },
+    {
+      "id": "fissure_empreinte_suivre_une_fissure_au_sol",
+      "label": "Suivre une fissure au sol",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "fissure_plume_passer_sans_aggraver_une_faille",
+      "label": "Passer sans aggraver une faille",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "plume"
+      ]
+    },
+    {
+      "id": "symbole_oeil_lire_un_signe_visible",
+      "label": "Lire un signe visible",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "oeil"
+      ]
+    },
+    {
+      "id": "symbole_oreille_associer_un_signe_a_un_son",
+      "label": "Associer un signe à un son",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "oreille"
+      ]
+    },
+    {
+      "id": "symbole_main_toucher_ou_activer_un_signe",
+      "label": "Toucher ou activer un signe",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "main"
+      ]
+    },
+    {
+      "id": "symbole_empreinte_suivre_une_serie_de_marques",
+      "label": "Suivre une série de marques",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "symbole_plume_approcher_un_signe_sans_le_troubler",
+      "label": "Approcher un signe sans le troubler",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "plume"
+      ]
+    },
+    {
+      "id": "echo_oeil_localiser_lorigine_dun_echo",
+      "label": "Localiser l’origine d’un écho",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "oeil"
+      ]
+    },
+    {
+      "id": "echo_oreille_ecouter_une_resonance",
+      "label": "Écouter une résonance",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "oreille"
+      ]
+    },
+    {
+      "id": "echo_main_provoquer_une_vibration",
+      "label": "Provoquer une vibration",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "main"
+      ]
+    },
+    {
+      "id": "echo_empreinte_suivre_un_echo",
+      "label": "Suivre un écho",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "echo_plume_avancer_sans_produire_decho",
+      "label": "Avancer sans produire d’écho",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "plume"
+      ]
+    },
+    {
+      "id": "lien_oeil_voir_une_correspondance",
+      "label": "Voir une correspondance",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "oeil"
+      ]
+    },
+    {
+      "id": "lien_oreille_entendre_une_reponse_liee_a_autre_chose",
+      "label": "Entendre une réponse liée à autre chose",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "oreille"
+      ]
+    },
+    {
+      "id": "lien_main_toucher_un_point_de_connexion",
+      "label": "Toucher un point de connexion",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "main"
+      ]
+    },
+    {
+      "id": "lien_empreinte_suivre_une_connexion",
+      "label": "Suivre une connexion",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "lien_plume_contourner_une_connexion_sensible",
+      "label": "Contourner une connexion sensible",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "plume"
+      ]
+    },
+    {
+      "id": "pierre_oeil_oeil_examiner_precisement_une_structure",
+      "label": "Examiner précisément une structure",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "oeil",
+        "oeil"
+      ]
+    },
+    {
+      "id": "pierre_oeil_oreille_reperer_une_zone_qui_sonne_creux",
+      "label": "Repérer une zone qui sonne creux",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "oeil",
+        "oreille"
+      ]
+    },
+    {
+      "id": "pierre_oeil_main_inspecter_une_surface",
+      "label": "Inspecter une surface",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "oeil",
+        "main"
+      ]
+    },
+    {
+      "id": "pierre_oeil_empreinte_choisir_un_appui_sur",
+      "label": "Choisir un appui sûr",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "oeil",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "pierre_oeil_plume_passer_sur_une_zone_fragile_avec_legerete",
+      "label": "Passer sur une zone fragile avec légèreté",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "oeil",
+        "plume"
+      ]
+    },
+    {
+      "id": "pierre_oreille_oreille_ecouter_la_matiere_en_profondeur",
+      "label": "Écouter la matière en profondeur",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "oreille",
+        "oreille"
+      ]
+    },
+    {
+      "id": "pierre_oreille_main_sentir_une_vibration_dans_la_matiere",
+      "label": "Sentir une vibration dans la matière",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "oreille",
+        "main"
+      ]
+    },
+    {
+      "id": "pierre_oreille_empreinte_avancer_en_suivant_les_resonances_du_sol",
+      "label": "Avancer en suivant les résonances du sol",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "oreille",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "pierre_oreille_plume_passer_sans_troubler_une_resonance",
+      "label": "Passer sans troubler une résonance",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "oreille",
+        "plume"
+      ]
+    },
+    {
+      "id": "pierre_main_main_mettre_fortement_une_structure_a_lepreuve",
+      "label": "Mettre fortement une structure à l’épreuve",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "main",
+        "main"
+      ]
+    },
+    {
+      "id": "pierre_main_empreinte_prendre_appui_sur_la_structure",
+      "label": "Prendre appui sur la structure",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "main",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "pierre_main_plume_se_hisser_sans_brutalite",
+      "label": "Se hisser sans brutalité",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "main",
+        "plume"
+      ]
+    },
+    {
+      "id": "pierre_empreinte_empreinte_progresser_sur_un_sol_difficile",
+      "label": "Progresser sur un sol difficile",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "empreinte",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "pierre_empreinte_plume_bondir_dappui_en_appui",
+      "label": "Bondir d’appui en appui",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "empreinte",
+        "plume"
+      ]
+    },
+    {
+      "id": "pierre_plume_plume_se_poser_sans_peser_sur_la_structure",
+      "label": "Se poser sans peser sur la structure",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "plume",
+        "plume"
+      ]
+    },
+    {
+      "id": "fissure_oeil_oeil_reperer_une_faille_cachee",
+      "label": "Repérer une faille cachée",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "oeil",
+        "oeil"
+      ]
+    },
+    {
+      "id": "fissure_oeil_oreille_reperer_un_craquement_suspect",
+      "label": "Repérer un craquement suspect",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "oeil",
+        "oreille"
+      ]
+    },
+    {
+      "id": "fissure_oeil_main_examiner_une_faille",
+      "label": "Examiner une faille",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "oeil",
+        "main"
+      ]
+    },
+    {
+      "id": "fissure_oeil_empreinte_suivre_une_faille",
+      "label": "Suivre une faille",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "oeil",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "fissure_oeil_plume_eviter_daggraver_une_faille",
+      "label": "Éviter d’aggraver une faille",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "oeil",
+        "plume"
+      ]
+    },
+    {
+      "id": "fissure_oreille_oreille_ecouter_des_craquements_profonds",
+      "label": "Écouter des craquements profonds",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "oreille",
+        "oreille"
+      ]
+    },
+    {
+      "id": "fissure_oreille_main_tester_une_faille_par_vibration",
+      "label": "Tester une faille par vibration",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "oreille",
+        "main"
+      ]
+    },
+    {
+      "id": "fissure_oreille_empreinte_se_deplacer_en_evitant_les_craquements",
+      "label": "Se déplacer en évitant les craquements",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "oreille",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "fissure_oreille_plume_passer_sans_faire_craquer",
+      "label": "Passer sans faire craquer",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "oreille",
+        "plume"
+      ]
+    },
+    {
+      "id": "fissure_main_main_exploiter_une_faiblesse",
+      "label": "Exploiter une faiblesse",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "main",
+        "main"
+      ]
+    },
+    {
+      "id": "fissure_main_empreinte_se_glisser_par_une_faille",
+      "label": "Se glisser par une faille",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "main",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "fissure_main_plume_se_degager_par_une_ouverture_etroite",
+      "label": "Se dégager par une ouverture étroite",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "main",
+        "plume"
+      ]
+    },
+    {
+      "id": "fissure_empreinte_empreinte_franchir_une_zone_fissuree",
+      "label": "Franchir une zone fissurée",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "empreinte",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "fissure_empreinte_plume_franchir_une_zone_fragile_avec_legerete",
+      "label": "Franchir une zone fragile avec légèreté",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "empreinte",
+        "plume"
+      ]
+    },
+    {
+      "id": "fissure_plume_plume_passer_sans_peser_sur_la_faille",
+      "label": "Passer sans peser sur la faille",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "plume",
+        "plume"
+      ]
+    },
+    {
+      "id": "symbole_oeil_oeil_dechiffrer_un_signe_visible",
+      "label": "Déchiffrer un signe visible",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "oeil",
+        "oeil"
+      ]
+    },
+    {
+      "id": "symbole_oeil_oreille_associer_un_signe_a_un_son",
+      "label": "Associer un signe à un son",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "oeil",
+        "oreille"
+      ]
+    },
+    {
+      "id": "symbole_oeil_main_lire_un_signe_par_le_regard_et_le_toucher",
+      "label": "Lire un signe par le regard et le toucher",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "oeil",
+        "main"
+      ]
+    },
+    {
+      "id": "symbole_oeil_empreinte_suivre_une_suite_de_signes",
+      "label": "Suivre une suite de signes",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "oeil",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "symbole_oeil_plume_identifier_un_signe_sans_le_troubler",
+      "label": "Identifier un signe sans le troubler",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "oeil",
+        "plume"
+      ]
+    },
+    {
+      "id": "symbole_oreille_oreille_entendre_un_rythme_dans_un_signe",
+      "label": "Entendre un rythme dans un signe",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "oreille",
+        "oreille"
+      ]
+    },
+    {
+      "id": "symbole_oreille_main_faire_repondre_un_signe",
+      "label": "Faire répondre un signe",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "oreille",
+        "main"
+      ]
+    },
+    {
+      "id": "symbole_oreille_empreinte_suivre_un_rythme_indique",
+      "label": "Suivre un rythme indiqué",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "oreille",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "symbole_oreille_plume_approcher_un_signe_sans_le_perturber",
+      "label": "Approcher un signe sans le perturber",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "oreille",
+        "plume"
+      ]
+    },
+    {
+      "id": "symbole_main_main_activer_fortement_un_symbole",
+      "label": "Activer fortement un symbole",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "main",
+        "main"
+      ]
+    },
+    {
+      "id": "symbole_main_empreinte_declencher_un_signe_en_se_placant",
+      "label": "Déclencher un signe en se plaçant",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "main",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "symbole_main_plume_effleurer_un_signe",
+      "label": "Effleurer un signe",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "main",
+        "plume"
+      ]
+    },
+    {
+      "id": "symbole_empreinte_empreinte_suivre_un_parcours_marque",
+      "label": "Suivre un parcours marqué",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "empreinte",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "symbole_empreinte_plume_traverser_une_zone_balisee_avec_finesse",
+      "label": "Traverser une zone balisée avec finesse",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "empreinte",
+        "plume"
+      ]
+    },
+    {
+      "id": "symbole_plume_plume_ne_pas_troubler_un_symbole_sensible",
+      "label": "Ne pas troubler un symbole sensible",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "plume",
+        "plume"
+      ]
+    },
+    {
+      "id": "echo_oeil_oeil_localiser_precisement_lorigine_dun_echo",
+      "label": "Localiser précisément l’origine d’un écho",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "oeil",
+        "oeil"
+      ]
+    },
+    {
+      "id": "echo_oeil_oreille_localiser_une_source_sonore",
+      "label": "Localiser une source sonore",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "oeil",
+        "oreille"
+      ]
+    },
+    {
+      "id": "echo_oeil_main_provoquer_puis_observer_une_vibration",
+      "label": "Provoquer puis observer une vibration",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "oeil",
+        "main"
+      ]
+    },
+    {
+      "id": "echo_oeil_empreinte_suivre_la_direction_dun_echo",
+      "label": "Suivre la direction d’un écho",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "oeil",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "echo_oeil_plume_reperer_ou_passer_sans_produire_decho",
+      "label": "Repérer où passer sans produire d’écho",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "oeil",
+        "plume"
+      ]
+    },
+    {
+      "id": "echo_oreille_oreille_ecouter_une_resonance_fine",
+      "label": "Écouter une résonance fine",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "oreille",
+        "oreille"
+      ]
+    },
+    {
+      "id": "echo_oreille_main_produire_un_son_controle",
+      "label": "Produire un son contrôlé",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "oreille",
+        "main"
+      ]
+    },
+    {
+      "id": "echo_oreille_empreinte_avancer_guidee_par_lecho",
+      "label": "Avancer guidée par l’écho",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "oreille",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "echo_oreille_plume_se_deplacer_sans_resonner",
+      "label": "Se déplacer sans résonner",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "oreille",
+        "plume"
+      ]
+    },
+    {
+      "id": "echo_main_main_provoquer_une_forte_resonance",
+      "label": "Provoquer une forte résonance",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "main",
+        "main"
+      ]
+    },
+    {
+      "id": "echo_main_empreinte_coordonner_geste_et_deplacement_sur_un_rythme",
+      "label": "Coordonner geste et déplacement sur un rythme",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "main",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "echo_main_plume_obtenir_une_faible_resonance",
+      "label": "Obtenir une faible résonance",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "main",
+        "plume"
+      ]
+    },
+    {
+      "id": "echo_empreinte_empreinte_suivre_un_rythme_de_pas",
+      "label": "Suivre un rythme de pas",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "empreinte",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "echo_empreinte_plume_ajuster_ses_pas_au_son",
+      "label": "Ajuster ses pas au son",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "empreinte",
+        "plume"
+      ]
+    },
+    {
+      "id": "echo_plume_plume_se_rendre_presque_silencieuse",
+      "label": "Se rendre presque silencieuse",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "plume",
+        "plume"
+      ]
+    },
+    {
+      "id": "lien_oeil_oeil_voir_des_correspondances",
+      "label": "Voir des correspondances",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "oeil",
+        "oeil"
+      ]
+    },
+    {
+      "id": "lien_oeil_oreille_detecter_une_reponse_liee",
+      "label": "Détecter une réponse liée",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "oeil",
+        "oreille"
+      ]
+    },
+    {
+      "id": "lien_oeil_main_identifier_puis_toucher_un_point_de_connexion",
+      "label": "Identifier puis toucher un point de connexion",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "oeil",
+        "main"
+      ]
+    },
+    {
+      "id": "lien_oeil_empreinte_suivre_une_liaison_visible",
+      "label": "Suivre une liaison visible",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "oeil",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "lien_oeil_plume_contourner_un_lien_sensible",
+      "label": "Contourner un lien sensible",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "oeil",
+        "plume"
+      ]
+    },
+    {
+      "id": "lien_oreille_oreille_ecouter_une_reponse_entre_deux_points",
+      "label": "Écouter une réponse entre deux points",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "oreille",
+        "oreille"
+      ]
+    },
+    {
+      "id": "lien_oreille_main_sentir_une_connexion_vibrer",
+      "label": "Sentir une connexion vibrer",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "oreille",
+        "main"
+      ]
+    },
+    {
+      "id": "lien_oreille_empreinte_suivre_une_connexion_au_son",
+      "label": "Suivre une connexion au son",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "oreille",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "lien_oreille_plume_passer_sans_troubler_le_lien",
+      "label": "Passer sans troubler le lien",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "oreille",
+        "plume"
+      ]
+    },
+    {
+      "id": "lien_main_main_renforcer_une_connexion",
+      "label": "Renforcer une connexion",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "main",
+        "main"
+      ]
+    },
+    {
+      "id": "lien_main_empreinte_se_placer_sur_un_point_de_liaison",
+      "label": "Se placer sur un point de liaison",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "main",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "lien_main_plume_effleurer_une_connexion",
+      "label": "Effleurer une connexion",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "main",
+        "plume"
+      ]
+    },
+    {
+      "id": "lien_empreinte_empreinte_suivre_un_chemin_lie",
+      "label": "Suivre un chemin lié",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "empreinte",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "lien_empreinte_plume_traverser_une_connexion_avec_finesse",
+      "label": "Traverser une connexion avec finesse",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "empreinte",
+        "plume"
+      ]
+    },
+    {
+      "id": "lien_plume_plume_se_detacher_dun_lien_en_douceur",
+      "label": "Se détacher d’un lien en douceur",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "plume",
+        "plume"
+      ]
+    },
+    {
+      "id": "pierre_fissure_oeil_reperer_le_point_fragile_dune_structure",
+      "label": "Repérer le point fragile d’une structure",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "fissure",
+        "oeil"
+      ]
+    },
+    {
+      "id": "pierre_fissure_main_appuyer_sur_le_point_fragile",
+      "label": "Appuyer sur le point fragile",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "fissure",
+        "main"
+      ]
+    },
+    {
+      "id": "pierre_fissure_empreinte_traverser_une_zone_instable",
+      "label": "Traverser une zone instable",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "fissure",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "pierre_fissure_plume_stabiliser_une_zone_qui_cede",
+      "label": "Stabiliser une zone qui cède",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "fissure",
+        "plume"
+      ]
+    },
+    {
+      "id": "pierre_symbole_oeil_lire_une_inscription_gravee",
+      "label": "Lire une inscription gravée",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "symbole",
+        "oeil"
+      ]
+    },
+    {
+      "id": "pierre_symbole_main_toucher_une_marque_gravee",
+      "label": "Toucher une marque gravée",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "symbole",
+        "main"
+      ]
+    },
+    {
+      "id": "pierre_symbole_empreinte_suivre_un_marquage_dans_la_pierre",
+      "label": "Suivre un marquage dans la pierre",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "symbole",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "pierre_symbole_plume_effleurer_une_inscription_sensible",
+      "label": "Effleurer une inscription sensible",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "symbole",
+        "plume"
+      ]
+    },
+    {
+      "id": "pierre_echo_oreille_ecouter_une_salle_creuse",
+      "label": "Écouter une salle creuse",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "echo",
+        "oreille"
+      ]
+    },
+    {
+      "id": "pierre_echo_main_provoquer_une_reponse_dans_la_matiere",
+      "label": "Provoquer une réponse dans la matière",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "echo",
+        "main"
+      ]
+    },
+    {
+      "id": "pierre_echo_empreinte_suivre_une_vibration_dans_le_sol",
+      "label": "Suivre une vibration dans le sol",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "echo",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "pierre_lien_oeil_voir_ce_qui_soutient_une_structure",
+      "label": "Voir ce qui soutient une structure",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "lien",
+        "oeil"
+      ]
+    },
+    {
+      "id": "pierre_lien_main_toucher_un_point_de_soutien",
+      "label": "Toucher un point de soutien",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "lien",
+        "main"
+      ]
+    },
+    {
+      "id": "pierre_lien_empreinte_suivre_un_soutien_cache",
+      "label": "Suivre un soutien caché",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "lien",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "fissure_symbole_oeil_lire_un_signe_brise",
+      "label": "Lire un signe brisé",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "symbole",
+        "oeil"
+      ]
+    },
+    {
+      "id": "fissure_symbole_main_activer_un_signe_abime",
+      "label": "Activer un signe abîmé",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "symbole",
+        "main"
+      ]
+    },
+    {
+      "id": "fissure_symbole_empreinte_suivre_des_marques_fragmentees",
+      "label": "Suivre des marques fragmentées",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "symbole",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "fissure_echo_oreille_ecouter_une_faille_resonner",
+      "label": "Écouter une faille résonner",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "echo",
+        "oreille"
+      ]
+    },
+    {
+      "id": "fissure_echo_main_faire_resonner_une_breche",
+      "label": "Faire résonner une brèche",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "echo",
+        "main"
+      ]
+    },
+    {
+      "id": "fissure_echo_plume_passer_par_une_breche_sans_bruit",
+      "label": "Passer par une brèche sans bruit",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "echo",
+        "plume"
+      ]
+    },
+    {
+      "id": "fissure_lien_oeil_trouver_ou_un_lien_est_rompu",
+      "label": "Trouver où un lien est rompu",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "lien",
+        "oeil"
+      ]
+    },
+    {
+      "id": "fissure_lien_main_rompre_une_connexion_fragile",
+      "label": "Rompre une connexion fragile",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "lien",
+        "main"
+      ]
+    },
+    {
+      "id": "fissure_lien_empreinte_suivre_une_rupture_de_connexion",
+      "label": "Suivre une rupture de connexion",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "lien",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "symbole_echo_oreille_entendre_un_symbole_repondre",
+      "label": "Entendre un symbole répondre",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "echo",
+        "oreille"
+      ]
+    },
+    {
+      "id": "symbole_echo_main_faire_resonner_un_symbole",
+      "label": "Faire résonner un symbole",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "echo",
+        "main"
+      ]
+    },
+    {
+      "id": "symbole_echo_empreinte_suivre_une_reponse_symbolique",
+      "label": "Suivre une réponse symbolique",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "echo",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "symbole_lien_oeil_voir_quels_signes_sont_lies",
+      "label": "Voir quels signes sont liés",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "lien",
+        "oeil"
+      ]
+    },
+    {
+      "id": "symbole_lien_main_toucher_le_signe_qui_relie_les_autres",
+      "label": "Toucher le signe qui relie les autres",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "lien",
+        "main"
+      ]
+    },
+    {
+      "id": "symbole_lien_empreinte_suivre_une_suite_de_signes_lies",
+      "label": "Suivre une suite de signes liés",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "lien",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "echo_lien_oreille_ecouter_une_connexion_a_distance",
+      "label": "Écouter une connexion à distance",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "lien",
+        "oreille"
+      ]
+    },
+    {
+      "id": "echo_lien_main_faire_vibrer_une_connexion",
+      "label": "Faire vibrer une connexion",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "lien",
+        "main"
+      ]
+    },
+    {
+      "id": "echo_lien_empreinte_suivre_une_resonance_liee",
+      "label": "Suivre une résonance liée",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "lien",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "pierre_pierre_oeil_examiner_une_structure_a_stabiliser",
+      "label": "Examiner une structure à stabiliser",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "pierre",
+        "oeil"
+      ]
+    },
+    {
+      "id": "pierre_pierre_main_tenir_une_structure_sous_pression",
+      "label": "Tenir une structure sous pression",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "pierre",
+        "main"
+      ]
+    },
+    {
+      "id": "pierre_pierre_empreinte_avancer_sur_une_structure_solide",
+      "label": "Avancer sur une structure solide",
+      "category": "Classe + race",
+      "icons": [
+        "pierre",
+        "pierre",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "fissure_fissure_oeil_reperer_une_rupture_imminente",
+      "label": "Repérer une rupture imminente",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "fissure",
+        "oeil"
+      ]
+    },
+    {
+      "id": "fissure_fissure_main_forcer_une_rupture",
+      "label": "Forcer une rupture",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "fissure",
+        "main"
+      ]
+    },
+    {
+      "id": "fissure_fissure_plume_se_faufiler_par_une_ouverture_qui_cede",
+      "label": "Se faufiler par une ouverture qui cède",
+      "category": "Classe + race",
+      "icons": [
+        "fissure",
+        "fissure",
+        "plume"
+      ]
+    },
+    {
+      "id": "symbole_symbole_oeil_dechiffrer_un_ensemble_de_signes",
+      "label": "Déchiffrer un ensemble de signes",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "symbole",
+        "oeil"
+      ]
+    },
+    {
+      "id": "symbole_symbole_main_activer_une_suite_de_signes",
+      "label": "Activer une suite de signes",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "symbole",
+        "main"
+      ]
+    },
+    {
+      "id": "symbole_symbole_empreinte_suivre_une_consigne_inscrite",
+      "label": "Suivre une consigne inscrite",
+      "category": "Classe + race",
+      "icons": [
+        "symbole",
+        "symbole",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "echo_echo_oreille_ecouter_une_reponse_claire",
+      "label": "Écouter une réponse claire",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "echo",
+        "oreille"
+      ]
+    },
+    {
+      "id": "echo_echo_main_produire_un_appel_sonore_net",
+      "label": "Produire un appel sonore net",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "echo",
+        "main"
+      ]
+    },
+    {
+      "id": "echo_echo_empreinte_avancer_au_rythme_dune_reponse",
+      "label": "Avancer au rythme d’une réponse",
+      "category": "Classe + race",
+      "icons": [
+        "echo",
+        "echo",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "lien_lien_oeil_voir_un_reseau_complet",
+      "label": "Voir un réseau complet",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "lien",
+        "oeil"
+      ]
+    },
+    {
+      "id": "lien_lien_main_renforcer_un_reseau",
+      "label": "Renforcer un réseau",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "lien",
+        "main"
+      ]
+    },
+    {
+      "id": "lien_lien_empreinte_suivre_un_reseau_de_connexions",
+      "label": "Suivre un réseau de connexions",
+      "category": "Classe + race",
+      "icons": [
+        "lien",
+        "lien",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "pierre_fissure_symbole_comprendre_une_faiblesse_marquee",
+      "label": "Comprendre une faiblesse marquée",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "fissure",
+        "symbole"
+      ]
+    },
+    {
+      "id": "pierre_fissure_echo_localiser_une_breche_dangereuse",
+      "label": "Localiser une brèche dangereuse",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "fissure",
+        "echo"
+      ]
+    },
+    {
+      "id": "pierre_fissure_lien_trouver_le_point_de_rupture_dun_ensemble",
+      "label": "Trouver le point de rupture d’un ensemble",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "fissure",
+        "lien"
+      ]
+    },
+    {
+      "id": "pierre_symbole_echo_faire_resonner_une_inscription_gravee",
+      "label": "Faire résonner une inscription gravée",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "symbole",
+        "echo"
+      ]
+    },
+    {
+      "id": "pierre_symbole_lien_comprendre_une_architecture_codee",
+      "label": "Comprendre une architecture codée",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "symbole",
+        "lien"
+      ]
+    },
+    {
+      "id": "pierre_echo_lien_suivre_une_vibration_dans_la_structure",
+      "label": "Suivre une vibration dans la structure",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "echo",
+        "lien"
+      ]
+    },
+    {
+      "id": "fissure_symbole_echo_reveiller_un_signe_brise",
+      "label": "Réveiller un signe brisé",
+      "category": "Classe",
+      "icons": [
+        "fissure",
+        "symbole",
+        "echo"
+      ]
+    },
+    {
+      "id": "fissure_symbole_lien_comprendre_une_rupture_de_sceau_ou_de_lien",
+      "label": "Comprendre une rupture de sceau ou de lien",
+      "category": "Classe",
+      "icons": [
+        "fissure",
+        "symbole",
+        "lien"
+      ]
+    },
+    {
+      "id": "fissure_echo_lien_localiser_une_rupture_dans_un_reseau",
+      "label": "Localiser une rupture dans un réseau",
+      "category": "Classe",
+      "icons": [
+        "fissure",
+        "echo",
+        "lien"
+      ]
+    },
+    {
+      "id": "symbole_echo_lien_entrer_en_dialogue_avec_un_systeme_ancien",
+      "label": "Entrer en dialogue avec un système ancien",
+      "category": "Classe",
+      "icons": [
+        "symbole",
+        "echo",
+        "lien"
+      ]
+    },
+    {
+      "id": "pierre_pierre_fissure_consolider_une_zone_fragilisee",
+      "label": "Consolider une zone fragilisée",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "pierre",
+        "fissure"
+      ]
+    },
+    {
+      "id": "pierre_pierre_symbole_ancrer_un_signe_dans_la_matiere",
+      "label": "Ancrer un signe dans la matière",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "pierre",
+        "symbole"
+      ]
+    },
+    {
+      "id": "pierre_pierre_echo_faire_vibrer_une_masse_solide",
+      "label": "Faire vibrer une masse solide",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "pierre",
+        "echo"
+      ]
+    },
+    {
+      "id": "pierre_pierre_lien_renforcer_un_soutien",
+      "label": "Renforcer un soutien",
+      "category": "Classe",
+      "icons": [
+        "pierre",
+        "pierre",
+        "lien"
+      ]
+    },
+    {
+      "id": "fissure_fissure_pierre_briser_une_resistance_solide",
+      "label": "Briser une résistance solide",
+      "category": "Classe",
+      "icons": [
+        "fissure",
+        "fissure",
+        "pierre"
+      ]
+    },
+    {
+      "id": "fissure_fissure_symbole_defaire_un_signe_abime",
+      "label": "Défaire un signe abîmé",
+      "category": "Classe",
+      "icons": [
+        "fissure",
+        "fissure",
+        "symbole"
+      ]
+    },
+    {
+      "id": "fissure_fissure_echo_faire_eclater_une_resonance_instable",
+      "label": "Faire éclater une résonance instable",
+      "category": "Classe",
+      "icons": [
+        "fissure",
+        "fissure",
+        "echo"
+      ]
+    },
+    {
+      "id": "fissure_fissure_lien_rompre_un_lien_fragile",
+      "label": "Rompre un lien fragile",
+      "category": "Classe",
+      "icons": [
+        "fissure",
+        "fissure",
+        "lien"
+      ]
+    },
+    {
+      "id": "symbole_symbole_pierre_fixer_un_signe",
+      "label": "Fixer un signe",
+      "category": "Classe",
+      "icons": [
+        "symbole",
+        "symbole",
+        "pierre"
+      ]
+    },
+    {
+      "id": "symbole_symbole_fissure_decoder_une_inscription_fragmentee",
+      "label": "Décoder une inscription fragmentée",
+      "category": "Classe",
+      "icons": [
+        "symbole",
+        "symbole",
+        "fissure"
+      ]
+    },
+    {
+      "id": "symbole_symbole_echo_obtenir_une_reponse_codee",
+      "label": "Obtenir une réponse codée",
+      "category": "Classe",
+      "icons": [
+        "symbole",
+        "symbole",
+        "echo"
+      ]
+    },
+    {
+      "id": "symbole_symbole_lien_relier_des_signes_en_systeme",
+      "label": "Relier des signes en système",
+      "category": "Classe",
+      "icons": [
+        "symbole",
+        "symbole",
+        "lien"
+      ]
+    },
+    {
+      "id": "echo_echo_pierre_cartographier_un_volume_par_resonance",
+      "label": "Cartographier un volume par résonance",
+      "category": "Classe",
+      "icons": [
+        "echo",
+        "echo",
+        "pierre"
+      ]
+    },
+    {
+      "id": "echo_echo_fissure_reveler_une_rupture_cachee",
+      "label": "Révéler une rupture cachée",
+      "category": "Classe",
+      "icons": [
+        "echo",
+        "echo",
+        "fissure"
+      ]
+    },
+    {
+      "id": "echo_echo_symbole_faire_repondre_une_inscription",
+      "label": "Faire répondre une inscription",
+      "category": "Classe",
+      "icons": [
+        "echo",
+        "echo",
+        "symbole"
+      ]
+    },
+    {
+      "id": "echo_echo_lien_propager_une_resonance_liee",
+      "label": "Propager une résonance liée",
+      "category": "Classe",
+      "icons": [
+        "echo",
+        "echo",
+        "lien"
+      ]
+    },
+    {
+      "id": "lien_lien_pierre_reconstituer_un_reseau_de_soutien",
+      "label": "Reconstituer un réseau de soutien",
+      "category": "Classe",
+      "icons": [
+        "lien",
+        "lien",
+        "pierre"
+      ]
+    },
+    {
+      "id": "lien_lien_fissure_isoler_une_rupture_de_reseau",
+      "label": "Isoler une rupture de réseau",
+      "category": "Classe",
+      "icons": [
+        "lien",
+        "lien",
+        "fissure"
+      ]
+    },
+    {
+      "id": "lien_lien_symbole_recomposer_une_chaine_de_signes",
+      "label": "Recomposer une chaîne de signes",
+      "category": "Classe",
+      "icons": [
+        "lien",
+        "lien",
+        "symbole"
+      ]
+    },
+    {
+      "id": "lien_lien_echo_suivre_un_appel_a_distance",
+      "label": "Suivre un appel à distance",
+      "category": "Classe",
+      "icons": [
+        "lien",
+        "lien",
+        "echo"
       ]
     }
   ]
