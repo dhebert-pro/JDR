@@ -6,474 +6,69 @@
   <title>Elyra — Lancer de dés</title>
   <style>
     :root {
-      --panel: rgba(255, 251, 241, 0.97);
-      --ink: #2f2818;
-      --muted: #7c7157;
-      --gold: #c6a24c;
-      --gold-soft: rgba(198, 162, 76, 0.18);
-      --race: #d2ebce;
-      --class: #ddd6c7;
-      --personality: #efd4dc;
-      --shadow: rgba(0, 0, 0, 0.25);
-      --border: rgba(204, 175, 96, 0.55);
+      --bg1:#11130f; --bg2:#211f15; --panel:rgba(255,251,241,.97); --ink:#2f2818;
+      --muted:#7c7157; --gold:#c6a24c; --gold-soft:rgba(198,162,76,.18);
+      --race:#d2ebce; --class:#ddd6c7; --personality:#efd4dc; --shadow:rgba(0,0,0,.25);
+      --border:rgba(204,175,96,.55);
     }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(198, 162, 76, 0.16), transparent 30rem),
-        radial-gradient(circle at bottom right, rgba(113, 153, 106, 0.18), transparent 32rem),
-        linear-gradient(135deg, #12130f, #222015 55%, #1b1b14);
-    }
-
-    .app {
-      width: min(1220px, calc(100% - 26px));
-      margin: 0 auto;
-      padding: 16px 0 22px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      color: #fff2c9;
-      margin-bottom: 12px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(1.35rem, 2.4vw, 2.05rem);
-    }
-
-    .subtitle {
-      margin: 4px 0 0;
-      color: #dbcda4;
-      font-size: 0.95rem;
-    }
-
-    button {
-      border: 0;
-      border-radius: 999px;
-      padding: 9px 14px;
-      cursor: pointer;
-      font-weight: 800;
-      color: #fff4ca;
-      background: rgba(255, 247, 214, 0.1);
-      border: 1px solid rgba(238, 213, 128, 0.45);
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: 190px minmax(0, 1fr);
-      gap: 12px;
-      align-items: start;
-    }
-
-    .panel {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      box-shadow: 0 16px 42px var(--shadow);
-    }
-
-    .sidebar {
-      padding: 10px;
-      position: sticky;
-      top: 10px;
-      z-index: 5;
-    }
-
-    .sidebar h2 {
-      margin: 0 0 8px;
-      font-size: 0.95rem;
-    }
-
-    .die-toggle {
-      position: relative;
-      display: grid;
-      grid-template-columns: 18px 1fr;
-      gap: 7px;
-      align-items: center;
-      margin-bottom: 7px;
-      padding: 8px 8px;
-      border-radius: 13px;
-      border: 1px solid rgba(146, 119, 48, 0.22);
-      background: rgba(255,255,255,0.64);
-      cursor: pointer;
-      user-select: none;
-      transition: border-color 0.12s ease, background 0.12s ease, opacity 0.12s ease;
-    }
-
-    .die-toggle:hover,
-    .die-toggle:focus-within {
-      border-color: rgba(202, 166, 74, 0.85);
-      background: rgba(255,255,255,0.9);
-    }
-
-    .die-toggle.is-off {
-      opacity: 0.44;
-      background: rgba(255,255,255,0.35);
-    }
-
-    .die-toggle::before {
-      content: "";
-      position: absolute;
-      inset: 6px auto 6px 0;
-      width: 4px;
-      border-radius: 999px;
-      background: var(--stripe, #81b973);
-    }
-
-    .die-toggle input {
-      width: 16px;
-      height: 16px;
-      accent-color: var(--gold);
-    }
-
-    .die-name {
-      display: block;
-      font-size: 0.86rem;
-      font-weight: 900;
-      line-height: 1.1;
-    }
-
-    .die-kind {
-      display: inline-block;
-      margin-top: 4px;
-      padding: 2px 7px;
-      border-radius: 999px;
-      font-size: 0.64rem;
-      font-weight: 900;
-      color: #2f250c;
-      background: var(--gold-soft);
-    }
-
-    .faces-popover {
-      position: absolute;
-      left: calc(100% + 10px);
-      top: 50%;
-      transform: translateY(-50%) scale(0.98);
-      width: 178px;
-      padding: 8px;
-      border-radius: 15px;
-      border: 1px solid rgba(202, 166, 74, 0.48);
-      background: rgba(255, 252, 240, 0.985);
-      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.12s ease, transform 0.12s ease;
-    }
-
-    .die-toggle:hover .faces-popover,
-    .die-toggle:focus-within .faces-popover {
-      opacity: 1;
-      transform: translateY(-50%) scale(1);
-    }
-
-    .faces-preview {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 6px;
-    }
-
-    .main-panel {
-      padding: 16px;
-      display: grid;
-      gap: 16px;
-    }
-
-    .roll-zone {
-      min-height: 385px;
-      padding: clamp(10px, 2vw, 20px);
-      border-radius: 18px;
-      border: 1px solid rgba(226, 196, 115, 0.36);
-      background: rgba(255,255,255,0.45);
-      cursor: pointer;
-      outline: none;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      justify-content: center;
-      transition: transform 0.08s ease, border-color 0.12s ease, background 0.12s ease;
-    }
-
-    .roll-zone:hover,
-    .roll-zone:focus-visible {
-      border-color: rgba(226, 196, 115, 0.85);
-      background: rgba(255,255,255,0.62);
-    }
-
-    .roll-zone:active { transform: translateY(1px); }
-    .roll-zone.is-rolling { cursor: wait; }
-
-    .roll-topline {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      color: var(--muted);
-      font-weight: 750;
-    }
-
-    .roll-topline strong {
-      color: var(--ink);
-      font-size: clamp(1.08rem, 1.9vw, 1.3rem);
-    }
-
-    .roll-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(122px, 1fr));
-      gap: clamp(12px, 1.8vw, 22px);
-      align-items: center;
-    }
-
-    .roll-slot {
-      min-width: 0;
-      display: grid;
-      justify-items: center;
-      gap: 8px;
-      padding: 6px;
-      perspective: 900px;
-    }
-
-    .roll-slot-name {
-      min-height: 2.1em;
-      text-align: center;
-      font-weight: 900;
-      color: #3b321d;
-      line-height: 1.1;
-    }
-
-    .face {
-      position: relative;
-      display: inline-grid;
-      place-items: center;
-      aspect-ratio: 1 / 1;
-      border-radius: 16%;
-      overflow: hidden;
-      isolation: isolate;
-      transform-style: preserve-3d;
-      background: var(--die-color, var(--race));
-    }
-
-    .face.preview-face {
-      width: 48px;
-      height: 48px;
-      border-radius: 14%;
-    }
-
-    .face.big-face {
-      width: min(145px, 18vw);
-      min-width: 105px;
-      max-width: 158px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.16);
-    }
-
-    .face.big-face.rolling {
-      animation: dieSpin 0.22s linear infinite;
-      filter: saturate(1.08) contrast(1.04);
-    }
-
-    .roll-slot.is-revealed .big-face {
-      animation: revealPop 0.28s ease-out;
-    }
-
-    @keyframes dieSpin {
-      0%   { transform: rotateY(0deg) rotateZ(-2deg) scale(1); }
-      33%  { transform: rotateY(80deg) rotateZ(3deg) scale(0.98); }
-      66%  { transform: rotateY(160deg) rotateZ(-2deg) scale(1.01); }
-      100% { transform: rotateY(360deg) rotateZ(2deg) scale(1); }
-    }
-
-    @keyframes revealPop {
-      0%   { transform: rotateY(68deg) scale(0.88); opacity: 0.6; }
-      70%  { transform: rotateY(0deg) scale(1.08); opacity: 1; }
-      100% { transform: rotateY(0deg) scale(1); opacity: 1; }
-    }
-
-    .face-icon {
-      position: absolute;
-      z-index: 1;
-      width: 62%;
-      height: 62%;
-      object-fit: contain;
-      pointer-events: none;
-    }
-
-    .face-frame {
-      position: absolute;
-      z-index: 2;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      pointer-events: none;
-    }
-
-    .empty-roll,
-    .empty-actions {
-      min-height: 120px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      color: var(--muted);
-      font-weight: 800;
-    }
-
-    .results-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .mini-chip {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(202, 166, 74, 0.26);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-    }
-
-    .mini-chip img {
-      width: 28px;
-      height: 28px;
-      object-fit: contain;
-    }
-
-    .actions-panel {
-      border-top: 1px solid rgba(202, 166, 74, 0.22);
-      padding-top: 14px;
-      display: grid;
-      gap: 14px;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .section-head h2,
-    .group h3 {
-      margin: 0;
-    }
-
-    .group {
-      display: grid;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-
-    .group h3 {
-      font-size: 0.96rem;
-      color: #5b4d2d;
-      padding-bottom: 2px;
-      border-bottom: 1px dashed rgba(202, 166, 74, 0.32);
-    }
-
-    .actions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 10px;
-    }
-
-    .action-card {
-      padding: 10px 12px;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(202, 166, 74, 0.22);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
-      display: grid;
-      gap: 8px;
-    }
-
-    .action-icons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .action-label {
-      font-weight: 800;
-      line-height: 1.25;
-      color: #2d2413;
-    }
-
-    .notice {
-      color: var(--muted);
-      font-size: 0.88rem;
-      line-height: 1.35;
-    }
-
-    dialog {
-      width: min(760px, calc(100% - 22px));
-      border: 1px solid rgba(215, 184, 93, 0.72);
-      border-radius: 22px;
-      padding: 0;
-      color: var(--ink);
-      background: #fff9e9;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-    }
-
-    dialog::backdrop { background: rgba(0,0,0,0.56); }
-
-    .modal-header {
-      padding: 16px 18px;
-      background: linear-gradient(90deg, rgba(201, 167, 77, 0.32), rgba(255, 255, 255, 0));
-      border-bottom: 1px solid rgba(196, 164, 78, 0.36);
-    }
-
-    .modal-header h2 { margin: 0; }
-    .modal-header small { color: var(--muted); }
-    .modal-body { padding: 18px; line-height: 1.5; }
-    .modal-actions { display: flex; justify-content: flex-end; padding: 0 18px 18px; }
-
-    code {
-      padding: 2px 6px;
-      border-radius: 8px;
-      background: rgba(0,0,0,0.06);
-    }
-
-    @media (max-width: 900px) {
-      .layout { grid-template-columns: 1fr; }
-      .sidebar {
-        position: static;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-        gap: 8px;
-      }
-      .sidebar h2 { grid-column: 1 / -1; }
-      .die-toggle { margin-bottom: 0; }
-      .faces-popover {
-        left: 0;
-        top: calc(100% + 8px);
-        transform: scale(0.98);
-      }
-      .die-toggle:hover .faces-popover,
-      .die-toggle:focus-within .faces-popover { transform: scale(1); }
-    }
-
-    @media (max-width: 560px) {
-      header { flex-direction: column; align-items: flex-start; }
-      button { align-self: flex-end; }
-      .roll-topline { flex-direction: column; align-items: flex-start; }
-      .roll-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
-      .face.big-face { width: 120px; }
-      .actions-grid { grid-template-columns: 1fr; }
-    }
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(circle at top left,rgba(198,162,76,.16),transparent 30rem),radial-gradient(circle at bottom right,rgba(113,153,106,.18),transparent 32rem),linear-gradient(135deg,var(--bg1),#222015 55%,var(--bg2));}
+    .app{width:min(1240px,calc(100% - 26px));margin:0 auto;padding:16px 0 22px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#fff2c9;margin-bottom:12px}
+    h1{margin:0;font-size:clamp(1.35rem,2.4vw,2.05rem)}
+    .subtitle{margin:4px 0 0;color:#dbcda4;font-size:.95rem}
+    button{border:0;border-radius:999px;padding:8px 12px;cursor:pointer;font-weight:900;color:#2f250c;background:linear-gradient(#f4d982,#cda141);box-shadow:0 5px 14px rgba(0,0,0,.16)}
+    button.ghost{color:#fff4ca;background:rgba(255,247,214,.1);border:1px solid rgba(238,213,128,.45);box-shadow:none}
+    button:disabled{opacity:.35;cursor:not-allowed}
+    .layout{display:grid;grid-template-columns:310px minmax(0,1fr);gap:12px;align-items:start}
+    .panel{background:var(--panel);border:1px solid var(--border);border-radius:22px;box-shadow:0 16px 42px var(--shadow)}
+    .reserve{padding:12px;position:sticky;top:10px;z-index:5;max-height:calc(100vh - 24px);overflow:auto}
+    .reserve h2{margin:0 0 10px;font-size:1rem}
+    .reserve-group{margin-top:12px}
+    .reserve-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;color:#5b4d2d;font-weight:950;font-size:.88rem;text-transform:uppercase;letter-spacing:.04em}
+    .reserve-row{position:relative;display:grid;grid-template-columns:48px 1fr auto;gap:8px;align-items:center;margin-bottom:7px;padding:8px;border-radius:14px;border:1px solid rgba(146,119,48,.2);background:rgba(255,255,255,.62)}
+    .reserve-row::before{content:"";position:absolute;inset:7px auto 7px 0;width:4px;border-radius:999px;background:var(--stripe)}
+    .reserve-label strong{display:block;font-size:.88rem}
+    .reserve-label span{display:block;color:var(--muted);font-size:.72rem;line-height:1.15;margin-top:2px}
+    .reserve-controls{display:grid;grid-template-columns:28px 42px 28px;gap:4px;align-items:center}
+    .count{text-align:center;font-weight:950;color:#3a2f17}
+    .mini-face,.face{position:relative;display:inline-grid;place-items:center;aspect-ratio:1/1;border-radius:16%;overflow:hidden;isolation:isolate;background:var(--die-color)}
+    .mini-face{width:44px;height:44px;border-radius:14%}
+    .face-icon{position:absolute;z-index:1;width:62%;height:62%;object-fit:contain;pointer-events:none}
+    .face-frame{position:absolute;z-index:2;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
+    .main-panel{padding:16px;display:grid;gap:16px}
+    .roll-zone{min-height:385px;padding:clamp(10px,2vw,20px);border-radius:18px;border:1px solid rgba(226,196,115,.36);background:rgba(255,255,255,.45);cursor:pointer;outline:none;display:flex;flex-direction:column;gap:16px;justify-content:center;transition:transform .08s ease,border-color .12s ease,background .12s ease}
+    .roll-zone:hover,.roll-zone:focus-visible{border-color:rgba(226,196,115,.85);background:rgba(255,255,255,.62)}
+    .roll-zone:active{transform:translateY(1px)} .roll-zone.is-rolling{cursor:wait}
+    .roll-topline{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted);font-weight:750}
+    .roll-topline strong{color:var(--ink);font-size:clamp(1.08rem,1.9vw,1.3rem)}
+    .roll-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:clamp(10px,1.7vw,20px);align-items:center}
+    .roll-slot{min-width:0;display:grid;justify-items:center;gap:7px;padding:6px;perspective:900px}
+    .roll-slot-name{min-height:2em;text-align:center;font-weight:900;color:#3b321d;line-height:1.1;font-size:.9rem}
+    .big-face{width:min(132px,15vw);min-width:96px;max-width:148px;box-shadow:0 10px 24px rgba(0,0,0,.16);transform-style:preserve-3d}
+    .big-face.rolling{animation:dieSpin .22s linear infinite;filter:saturate(1.08) contrast(1.04)}
+    .roll-slot.is-revealed .big-face{animation:revealPop .28s ease-out}
+    @keyframes dieSpin{0%{transform:rotateY(0deg) rotateZ(-2deg) scale(1)}33%{transform:rotateY(80deg) rotateZ(3deg) scale(.98)}66%{transform:rotateY(160deg) rotateZ(-2deg) scale(1.01)}100%{transform:rotateY(360deg) rotateZ(2deg) scale(1)}}
+    @keyframes revealPop{0%{transform:rotateY(68deg) scale(.88);opacity:.6}70%{transform:rotateY(0deg) scale(1.08);opacity:1}100%{transform:rotateY(0deg) scale(1);opacity:1}}
+    .empty-roll,.empty-actions{min-height:120px;display:grid;place-items:center;text-align:center;color:var(--muted);font-weight:800}
+    .actions-panel{border-top:1px solid rgba(202,166,74,.22);padding-top:14px;display:grid;gap:14px}
+    .section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .section-head h2,.group h3{margin:0}
+    .results-strip{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+    .mini-chip{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.7);border:1px solid rgba(202,166,74,.26);box-shadow:0 6px 14px rgba(0,0,0,.08)}
+    .mini-chip img{width:28px;height:28px;object-fit:contain}
+    .notice{color:var(--muted);font-size:.88rem;line-height:1.35}
+    .group{display:grid;gap:10px;margin-bottom:12px}
+    .group h3{font-size:.96rem;color:#5b4d2d;padding-bottom:2px;border-bottom:1px dashed rgba(202,166,74,.32)}
+    .actions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+    .action-card{padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.72);border:1px solid rgba(202,166,74,.22);box-shadow:0 8px 18px rgba(0,0,0,.06);display:grid;gap:8px}
+    .action-icons{display:flex;flex-wrap:wrap;gap:6px} .action-label{font-weight:800;line-height:1.25;color:#2d2413}
+    dialog{width:min(760px,calc(100% - 22px));border:1px solid rgba(215,184,93,.72);border-radius:22px;padding:0;color:var(--ink);background:#fff9e9;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+    dialog::backdrop{background:rgba(0,0,0,.56)} .modal-header{padding:16px 18px;background:linear-gradient(90deg,rgba(201,167,77,.32),rgba(255,255,255,0));border-bottom:1px solid rgba(196,164,78,.36)}
+    .modal-header h2{margin:0} .modal-header small{color:var(--muted)} .modal-body{padding:18px;line-height:1.5} .modal-actions{display:flex;justify-content:flex-end;padding:0 18px 18px}
+    code{padding:2px 6px;border-radius:8px;background:rgba(0,0,0,.06)}
+    @media(max-width:960px){.layout{grid-template-columns:1fr}.reserve{position:static;max-height:none}.reserve-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:8px}.reserve-group{margin-top:0}}
+    @media(max-width:560px){header{flex-direction:column;align-items:flex-start}button.ghost{align-self:flex-end}.roll-topline{flex-direction:column;align-items:flex-start}.roll-grid{grid-template-columns:repeat(2,minmax(120px,1fr))}.big-face{width:120px}.actions-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -481,466 +76,160 @@
     <header>
       <div>
         <h1>Elyra — lancer de dés</h1>
-        <p class="subtitle">Clique dans la grande zone pour lancer les dés cochés.</p>
+        <p class="subtitle">Ajoute les dés depuis la réserve, puis clique dans la zone de lancer.</p>
       </div>
-      <button id="openMj" type="button">Menu MJ</button>
+      <button class="ghost" id="openMj" type="button">Menu MJ</button>
     </header>
-
     <main class="layout">
-      <aside class="panel sidebar" aria-label="Dés disponibles">
-        <h2>Dés</h2>
-        <div id="diceSidebar"></div>
+      <aside class="panel reserve" aria-label="Réserve de dés">
+        <h2>Dés disponibles</h2>
+        <div id="reserve" class="reserve-grid"></div>
       </aside>
-
       <section class="panel main-panel">
         <section class="roll-zone" id="rollZone" role="button" tabindex="0" aria-label="Lancer les dés sélectionnés">
-          <div class="roll-topline">
-            <strong>Zone de lancer</strong>
-            <span id="selectedCount"></span>
-          </div>
+          <div class="roll-topline"><strong>Zone de lancer</strong><span id="selectedCount"></span></div>
           <div class="roll-grid" id="rollGrid"></div>
         </section>
-
         <section class="actions-panel" aria-label="Actions possibles">
-          <div class="section-head">
-            <h2>Actions possibles</h2>
-            <div class="results-strip" id="resultsStrip"></div>
-          </div>
+          <div class="section-head"><h2>Actions possibles</h2><div class="results-strip" id="resultsStrip"></div></div>
           <div id="actionsNotice" class="notice"></div>
           <div id="actionsContent" class="empty-actions">Lance les dés pour voir les actions de base possibles.</div>
         </section>
       </section>
     </main>
   </div>
-
   <dialog id="mjDialog">
-    <div class="modal-header">
-      <h2>Menu MJ — Notes cachées</h2>
-      <small>Version avec tous les dés actuels.</small>
-    </div>
+    <div class="modal-header"><h2>Menu MJ — Notes cachées</h2><small>Nouvelle mécanique de réserve de dés.</small></div>
     <div class="modal-body">
-      <p><strong>Elyra</strong> est une elfe jeune et débutante, accordeuse de ruines.</p>
-      <p>Cette version permet de lancer tous les dés actuels : 3 dés de race, 2 dés de classe et 1 dé de personnalité.</p>
-      <p>Pour l'instant, les actions automatiques chargées depuis <code>actions/race_actions.json</code> ne concernent que les icônes de race.</p>
-      <p>Le fichier JSON ne contient pas de champ <code>order</code>. L'ordre du tableau sert d'ordre d'affichage.</p>
+      <p>Chaque dé est lié à une seule icône. Les faces restantes sont blanches.</p>
+      <ul>
+        <li><strong>Race</strong> : 3 dés disponibles par icône, avec 5 faces icône + 1 face blanche.</li>
+        <li><strong>Classe</strong> : 2 dés disponibles par icône, avec 4 faces icône + 2 faces blanches.</li>
+        <li><strong>Personnalité</strong> : 1 dé disponible par icône, avec 3 faces icône + 3 faces blanches.</li>
+      </ul>
+      <p>Le fichier d'actions est chargé depuis <code>actions/race_actions.json</code>. Pour l'instant, il ne contient que les actions de base liées aux icônes de race.</p>
     </div>
-    <div class="modal-actions">
-      <button id="closeMj" type="button">Fermer</button>
-    </div>
+    <div class="modal-actions"><button id="closeMj" type="button">Fermer</button></div>
   </dialog>
-
-  <script>
-    const FRAME_SRC = "img/de.png";
-    const ACTIONS_SRC = "actions/race_actions.json";
-
-    const faces = {
-      oeil: { src: "img/faces/01_oeil.png" },
-      oreille: { src: "img/faces/02_oreille.png" },
-      main: { src: "img/faces/03_main.png" },
-      empreinte: { src: "img/faces/04_empreinte.png" },
-      plume: { src: "img/faces/05_plume.png" },
-
-      pierre: { src: "img/faces/06_pierre.png" },
-      fissure: { src: "img/faces/07_fissure.png" },
-      symbole: { src: "img/faces/08_symbole.png" },
-      echo: { src: "img/faces/09_echo.png" },
-      lien: { src: "img/faces/10_lien.png" },
-
-      question: { src: "img/faces/11_question.png" },
-      bouclier: { src: "img/faces/12_bouclier.png" },
-      sablier: { src: "img/faces/13_sablier.png" },
-      coeur: { src: "img/faces/14_coeur.png" },
-      fleurFanee: { src: "img/faces/15_fleur_fanee.png" },
-
-      vide: { src: null }
-    };
-
-    const dice = [
-      {
-        id: "race-1",
-        name: "Elfe I",
-        kindLabel: "Race",
-        color: "var(--race)",
-        stripe: "#81b973",
-        faces: ["oeil", "oreille", "main", "empreinte", "plume", "vide"]
-      },
-      {
-        id: "race-2",
-        name: "Elfe II",
-        kindLabel: "Race",
-        color: "var(--race)",
-        stripe: "#81b973",
-        faces: ["oeil", "oreille", "main", "empreinte", "plume", "vide"]
-      },
-      {
-        id: "race-3",
-        name: "Elfe III",
-        kindLabel: "Race",
-        color: "var(--race)",
-        stripe: "#81b973",
-        faces: ["oeil", "oreille", "main", "empreinte", "plume", "vide"]
-      },
-      {
-        id: "classe-1",
-        name: "Ruines I",
-        kindLabel: "Classe",
-        color: "var(--class)",
-        stripe: "#9a9177",
-        faces: ["pierre", "fissure", "symbole", "echo", "lien", "vide"]
-      },
-      {
-        id: "classe-2",
-        name: "Ruines II",
-        kindLabel: "Classe",
-        color: "var(--class)",
-        stripe: "#9a9177",
-        faces: ["pierre", "fissure", "symbole", "echo", "lien", "vide"]
-      },
-      {
-        id: "personnalite-1",
-        name: "Elyra",
-        kindLabel: "Personnalité",
-        color: "var(--personality)",
-        stripe: "#c27c91",
-        faces: ["question", "bouclier", "sablier", "coeur", "fleurFanee", "vide"]
-      }
-    ];
-
-    const FALLBACK_ACTIONS = [{"id": "regarder", "label": "Regarder", "category": "Perception", "icons": ["oeil"]}, {"id": "ecouter", "label": "Écouter", "category": "Perception", "icons": ["oreille"]}, {"id": "toucher", "label": "Toucher / palper", "category": "Perception", "icons": ["main"]}, {"id": "marcher", "label": "Marcher", "category": "Déplacement", "icons": ["empreinte"]}, {"id": "sauter", "label": "Sauter", "category": "Déplacement", "icons": ["plume"]}, {"id": "observer_attentivement", "label": "Observer attentivement", "category": "Perception", "icons": ["oeil", "oeil"]}, {"id": "ecouter_attentivement", "label": "Écouter attentivement", "category": "Perception", "icons": ["oreille", "oreille"]}, {"id": "sentir_presence", "label": "Sentir une présence proche", "category": "Perception", "icons": ["oeil", "oreille"]}, {"id": "chercher_visuellement", "label": "Chercher visuellement", "category": "Perception", "icons": ["oeil", "main"]}, {"id": "fouiller_tatons", "label": "Fouiller à tâtons", "category": "Perception", "icons": ["main", "main"]}, {"id": "estimer_distance", "label": "Estimer une distance", "category": "Perception", "icons": ["oeil", "empreinte"]}, {"id": "suivre_regard", "label": "Suivre du regard", "category": "Perception", "icons": ["oeil", "plume"]}, {"id": "suivre_bruit", "label": "Suivre un bruit", "category": "Déplacement", "icons": ["oreille", "empreinte"]}, {"id": "approcher_sans_bruit", "label": "Approcher sans bruit", "category": "Déplacement", "icons": ["oreille", "plume"]}, {"id": "grimper", "label": "Grimper", "category": "Déplacement", "icons": ["main", "empreinte"]}, {"id": "se_hisser", "label": "Se hisser", "category": "Déplacement", "icons": ["main", "plume"]}, {"id": "courir", "label": "Courir", "category": "Déplacement", "icons": ["empreinte", "empreinte"]}, {"id": "avancer_discretement", "label": "Avancer discrètement", "category": "Déplacement", "icons": ["empreinte", "plume"]}, {"id": "bondir", "label": "Bondir", "category": "Déplacement", "icons": ["plume", "plume"]}, {"id": "reagir_vite", "label": "Réagir vite", "category": "Réaction", "icons": ["oeil", "oreille", "main"]}, {"id": "avancer_prudemment", "label": "Avancer prudemment", "category": "Déplacement", "icons": ["oeil", "oreille", "empreinte"]}, {"id": "eviter_attention", "label": "Éviter l'attention", "category": "Discrétion", "icons": ["oeil", "oreille", "plume"]}, {"id": "percevoir_detail", "label": "Percevoir un détail", "category": "Perception", "icons": ["oeil", "oeil", "main"]}, {"id": "poursuivre", "label": "Poursuivre", "category": "Déplacement", "icons": ["oeil", "empreinte", "empreinte"]}, {"id": "contourner", "label": "Contourner", "category": "Déplacement", "icons": ["oeil", "empreinte", "plume"]}, {"id": "percevoir_mouvement", "label": "Percevoir un mouvement", "category": "Perception", "icons": ["oeil", "plume", "plume"]}, {"id": "percevoir_son_faible", "label": "Percevoir un son faible", "category": "Perception", "icons": ["oreille", "oreille", "oeil"]}, {"id": "reperer_direction_sonore", "label": "Repérer une direction sonore", "category": "Perception", "icons": ["oreille", "oreille", "empreinte"]}, {"id": "rester_immobile", "label": "Rester immobile / retenir son souffle", "category": "Discrétion", "icons": ["oreille", "oreille", "plume"]}, {"id": "se_deplacer_aveugle", "label": "Se déplacer à l'aveugle", "category": "Déplacement", "icons": ["oreille", "main", "empreinte"]}, {"id": "reculer", "label": "Reculer", "category": "Déplacement", "icons": ["oreille", "empreinte", "plume"]}, {"id": "inspecter_surface", "label": "Inspecter une surface", "category": "Perception", "icons": ["main", "main", "oeil"]}, {"id": "tester_prise", "label": "Tester une prise / un appui", "category": "Déplacement", "icons": ["main", "main", "empreinte"]}, {"id": "atterrir_souplement", "label": "Atterrir souplement", "category": "Déplacement", "icons": ["main", "main", "plume"]}, {"id": "ramper", "label": "Ramper", "category": "Déplacement", "icons": ["main", "empreinte", "empreinte"]}, {"id": "se_glisser", "label": "Se glisser dans un passage étroit", "category": "Déplacement", "icons": ["main", "empreinte", "plume"]}, {"id": "se_faufiler", "label": "Se faufiler", "category": "Discrétion", "icons": ["main", "plume", "plume"]}, {"id": "fuir", "label": "Fuir", "category": "Déplacement", "icons": ["empreinte", "empreinte", "plume"]}, {"id": "franchir_obstacle", "label": "Franchir un obstacle avec agilité", "category": "Déplacement", "icons": ["empreinte", "plume", "plume"]}];
-
-    const selectedDice = new Set(dice.map(die => die.id));
-    const lastResults = new Map();
-    let isRolling = false;
-    let actionData = [];
-
-    const diceSidebar = document.querySelector("#diceSidebar");
-    const rollGrid = document.querySelector("#rollGrid");
-    const selectedCount = document.querySelector("#selectedCount");
-    const rollZone = document.querySelector("#rollZone");
-    const resultsStrip = document.querySelector("#resultsStrip");
-    const actionsContent = document.querySelector("#actionsContent");
-    const actionsNotice = document.querySelector("#actionsNotice");
-
-    function clearFace(faceElement) {
-      faceElement.replaceChildren();
+<script>
+const FRAME_SRC = "img/de.png";
+const ACTIONS_SRC = "actions/race_actions.json";
+const faces = {
+  oeil: { label:"Œil", src:"img/faces/01_oeil.png" }, oreille: { label:"Oreille", src:"img/faces/02_oreille.png" },
+  main: { label:"Main", src:"img/faces/03_main.png" }, empreinte: { label:"Pied", src:"img/faces/04_empreinte.png" },
+  plume: { label:"Plume", src:"img/faces/05_plume.png" }, pierre: { label:"Pierre", src:"img/faces/06_pierre.png" },
+  fissure: { label:"Fissure", src:"img/faces/07_fissure.png" }, symbole: { label:"Symbole", src:"img/faces/08_symbole.png" },
+  echo: { label:"Écho", src:"img/faces/09_echo.png" }, lien: { label:"Lien", src:"img/faces/10_lien.png" },
+  question: { label:"Question", src:"img/faces/11_question.png" }, bouclier: { label:"Bouclier", src:"img/faces/12_bouclier.png" },
+  sablier: { label:"Sablier", src:"img/faces/13_sablier.png" }, coeur: { label:"Cœur", src:"img/faces/14_coeur.png" },
+  fleurFanee: { label:"Fleur fanée", src:"img/faces/15_fleur_fanee.png" }, vide: { label:"Blanc", src:null }
+};
+const dieTypes = [
+  ...["empreinte","oeil","oreille","main","plume"].map(icon => ({ id:"race-"+icon, group:"Race", icon, max:3, iconFaces:5, blankFaces:1, color:"var(--race)", stripe:"#81b973" })),
+  ...["pierre","fissure","symbole","echo","lien"].map(icon => ({ id:"classe-"+icon, group:"Classe", icon, max:2, iconFaces:4, blankFaces:2, color:"var(--class)", stripe:"#9a9177" })),
+  ...["question","bouclier","sablier","coeur","fleurFanee"].map(icon => ({ id:"perso-"+icon, group:"Personnalité", icon, max:1, iconFaces:3, blankFaces:3, color:"var(--personality)", stripe:"#c27c91" }))
+];
+const FALLBACK_ACTIONS = [{"id": "regarder", "label": "Regarder", "category": "Perception", "icons": ["oeil"]}, {"id": "ecouter", "label": "Écouter", "category": "Perception", "icons": ["oreille"]}, {"id": "toucher", "label": "Toucher / palper", "category": "Perception", "icons": ["main"]}, {"id": "marcher", "label": "Marcher", "category": "Déplacement", "icons": ["empreinte"]}, {"id": "sauter", "label": "Sauter", "category": "Déplacement", "icons": ["plume"]}, {"id": "observer_attentivement", "label": "Observer attentivement", "category": "Perception", "icons": ["oeil", "oeil"]}, {"id": "ecouter_attentivement", "label": "Écouter attentivement", "category": "Perception", "icons": ["oreille", "oreille"]}, {"id": "sentir_presence", "label": "Sentir une présence proche", "category": "Perception", "icons": ["oeil", "oreille"]}, {"id": "chercher_visuellement", "label": "Chercher visuellement", "category": "Perception", "icons": ["oeil", "main"]}, {"id": "fouiller_tatons", "label": "Fouiller à tâtons", "category": "Perception", "icons": ["main", "main"]}, {"id": "estimer_distance", "label": "Estimer une distance", "category": "Perception", "icons": ["oeil", "empreinte"]}, {"id": "suivre_regard", "label": "Suivre du regard", "category": "Perception", "icons": ["oeil", "plume"]}, {"id": "suivre_bruit", "label": "Suivre un bruit", "category": "Déplacement", "icons": ["oreille", "empreinte"]}, {"id": "approcher_sans_bruit", "label": "Approcher sans bruit", "category": "Déplacement", "icons": ["oreille", "plume"]}, {"id": "grimper", "label": "Grimper", "category": "Déplacement", "icons": ["main", "empreinte"]}, {"id": "se_hisser", "label": "Se hisser", "category": "Déplacement", "icons": ["main", "plume"]}, {"id": "courir", "label": "Courir", "category": "Déplacement", "icons": ["empreinte", "empreinte"]}, {"id": "avancer_discretement", "label": "Avancer discrètement", "category": "Déplacement", "icons": ["empreinte", "plume"]}, {"id": "bondir", "label": "Bondir", "category": "Déplacement", "icons": ["plume", "plume"]}, {"id": "reagir_vite", "label": "Réagir vite", "category": "Réaction", "icons": ["oeil", "oreille", "main"]}, {"id": "avancer_prudemment", "label": "Avancer prudemment", "category": "Déplacement", "icons": ["oeil", "oreille", "empreinte"]}, {"id": "eviter_attention", "label": "Éviter l'attention", "category": "Discrétion", "icons": ["oeil", "oreille", "plume"]}, {"id": "percevoir_detail", "label": "Percevoir un détail", "category": "Perception", "icons": ["oeil", "oeil", "main"]}, {"id": "poursuivre", "label": "Poursuivre", "category": "Déplacement", "icons": ["oeil", "empreinte", "empreinte"]}, {"id": "contourner", "label": "Contourner", "category": "Déplacement", "icons": ["oeil", "empreinte", "plume"]}, {"id": "percevoir_mouvement", "label": "Percevoir un mouvement", "category": "Perception", "icons": ["oeil", "plume", "plume"]}, {"id": "percevoir_son_faible", "label": "Percevoir un son faible", "category": "Perception", "icons": ["oreille", "oreille", "oeil"]}, {"id": "reperer_direction_sonore", "label": "Repérer une direction sonore", "category": "Perception", "icons": ["oreille", "oreille", "empreinte"]}, {"id": "rester_immobile", "label": "Rester immobile / retenir son souffle", "category": "Discrétion", "icons": ["oreille", "oreille", "plume"]}, {"id": "se_deplacer_aveugle", "label": "Se déplacer à l'aveugle", "category": "Déplacement", "icons": ["oreille", "main", "empreinte"]}, {"id": "reculer", "label": "Reculer", "category": "Déplacement", "icons": ["oreille", "empreinte", "plume"]}, {"id": "inspecter_surface", "label": "Inspecter une surface", "category": "Perception", "icons": ["main", "main", "oeil"]}, {"id": "tester_prise", "label": "Tester une prise / un appui", "category": "Déplacement", "icons": ["main", "main", "empreinte"]}, {"id": "atterrir_souplement", "label": "Atterrir souplement", "category": "Déplacement", "icons": ["main", "main", "plume"]}, {"id": "ramper", "label": "Ramper", "category": "Déplacement", "icons": ["main", "empreinte", "empreinte"]}, {"id": "se_glisser", "label": "Se glisser dans un passage étroit", "category": "Déplacement", "icons": ["main", "empreinte", "plume"]}, {"id": "se_faufiler", "label": "Se faufiler", "category": "Discrétion", "icons": ["main", "plume", "plume"]}, {"id": "fuir", "label": "Fuir", "category": "Déplacement", "icons": ["empreinte", "empreinte", "plume"]}, {"id": "franchir_obstacle", "label": "Franchir un obstacle avec agilité", "category": "Déplacement", "icons": ["empreinte", "plume", "plume"]}];
+const selectedCounts = new Map(dieTypes.map(t => [t.id, 0]));
+let lastRoll = [];
+let isRolling = false;
+let actionData = [];
+const reserve = document.querySelector("#reserve"), rollGrid = document.querySelector("#rollGrid"), selectedCount = document.querySelector("#selectedCount"), rollZone = document.querySelector("#rollZone"), resultsStrip = document.querySelector("#resultsStrip"), actionsContent = document.querySelector("#actionsContent"), actionsNotice = document.querySelector("#actionsNotice");
+function dieFaces(type) { return [...Array(type.iconFaces).fill(type.icon), ...Array(type.blankFaces).fill("vide")]; }
+function clearFace(el) { el.replaceChildren(); }
+function setFaceContent(el, faceId, type) {
+  clearFace(el); el.style.setProperty("--die-color", type.color);
+  if (faces[faceId]?.src) { const icon=document.createElement("img"); icon.className="face-icon"; icon.src=faces[faceId].src; icon.alt=""; icon.onerror=()=>icon.remove(); el.appendChild(icon); }
+  const frame=document.createElement("img"); frame.className="face-frame"; frame.src=FRAME_SRC; frame.alt=""; frame.onerror=()=>frame.remove(); el.appendChild(frame);
+}
+function createFace(faceId, type, className="") { const el=document.createElement("span"); el.className=`face ${className}`.trim(); setFaceContent(el, faceId, type); return el; }
+function createMiniIcon(faceId) { const chip=document.createElement("span"); chip.className="mini-chip"; if(faces[faceId]?.src){const img=document.createElement("img");img.src=faces[faceId].src;img.alt="";img.onerror=()=>img.remove();chip.appendChild(img)} return chip; }
+function selectedTotal() { return [...selectedCounts.values()].reduce((a,b)=>a+b,0); }
+function selectedInstances() {
+  const result=[];
+  for (const type of dieTypes) { for (let i=0; i<(selectedCounts.get(type.id)||0); i++) result.push({ type, instanceId: `${type.id}-${i}` }); }
+  return result;
+}
+function renderReserve() {
+  reserve.innerHTML="";
+  for (const groupName of ["Race","Classe","Personnalité"]) {
+    const section=document.createElement("section"); section.className="reserve-group";
+    const title=document.createElement("div"); title.className="reserve-title"; title.innerHTML=`<span>${groupName}</span><span>${groupName==="Race"?"5 + 1 blanche":groupName==="Classe"?"4 + 2 blanches":"3 + 3 blanches"}</span>`;
+    section.appendChild(title);
+    for (const type of dieTypes.filter(t=>t.group===groupName)) {
+      const count=selectedCounts.get(type.id)||0;
+      const row=document.createElement("div"); row.className="reserve-row"; row.style.setProperty("--stripe", type.stripe);
+      const icon=createFace(type.icon, type, "mini-face");
+      const label=document.createElement("div"); label.className="reserve-label"; label.innerHTML=`<strong>${faces[type.icon].label}</strong><span>${type.max} dispo · ${type.iconFaces} icône / ${type.blankFaces} blanche${type.blankFaces>1?"s":""}</span>`;
+      const controls=document.createElement("div"); controls.className="reserve-controls";
+      const minus=document.createElement("button"); minus.textContent="−"; minus.disabled=count<=0; minus.addEventListener("click",()=>changeCount(type.id,-1));
+      const countEl=document.createElement("div"); countEl.className="count"; countEl.textContent=`${count}/${type.max}`;
+      const plus=document.createElement("button"); plus.textContent="+"; plus.disabled=count>=type.max; plus.addEventListener("click",()=>changeCount(type.id,1));
+      controls.append(minus,countEl,plus); row.append(icon,label,controls); section.appendChild(row);
     }
-
-    function setFaceContent(faceElement, faceId, die) {
-      clearFace(faceElement);
-      faceElement.style.setProperty("--die-color", die.color);
-
-      if (faces[faceId] && faces[faceId].src) {
-        const icon = document.createElement("img");
-        icon.className = "face-icon";
-        icon.src = faces[faceId].src;
-        icon.alt = "";
-        icon.onerror = () => icon.remove();
-        faceElement.appendChild(icon);
-      }
-
-      const frame = document.createElement("img");
-      frame.className = "face-frame";
-      frame.src = FRAME_SRC;
-      frame.alt = "";
-      frame.onerror = () => frame.remove();
-      faceElement.appendChild(frame);
-    }
-
-    function createFace(faceId, die, className = "") {
-      const face = document.createElement("div");
-      face.className = `face ${className}`.trim();
-      setFaceContent(face, faceId, die);
-      return face;
-    }
-
-    function createMiniIcon(faceId) {
-      const chip = document.createElement("span");
-      chip.className = "mini-chip";
-      if (faces[faceId] && faces[faceId].src) {
-        const img = document.createElement("img");
-        img.src = faces[faceId].src;
-        img.alt = "";
-        img.onerror = () => img.remove();
-        chip.appendChild(img);
-      }
-      return chip;
-    }
-
-    function renderSidebar() {
-      diceSidebar.innerHTML = "";
-
-      for (const die of dice) {
-        const label = document.createElement("label");
-        label.className = "die-toggle";
-        label.style.setProperty("--stripe", die.stripe);
-        label.classList.toggle("is-off", !selectedDice.has(die.id));
-
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.checked = selectedDice.has(die.id);
-        checkbox.setAttribute("aria-label", `Lancer ${die.name}`);
-
-        const labelText = document.createElement("span");
-        labelText.innerHTML = `<span class="die-name">${die.name}</span><span class="die-kind">${die.kindLabel}</span>`;
-
-        const popover = document.createElement("div");
-        popover.className = "faces-popover";
-
-        const preview = document.createElement("div");
-        preview.className = "faces-preview";
-        for (const faceId of die.faces) {
-          preview.appendChild(createFace(faceId, die, "preview-face"));
-        }
-
-        popover.append(preview);
-        label.append(checkbox, labelText, popover);
-
-        checkbox.addEventListener("change", () => {
-          if (isRolling) return;
-          setDieSelection(die.id, checkbox.checked);
-        });
-
-        diceSidebar.appendChild(label);
-      }
-    }
-
-    function renderRollGrid() {
-      rollGrid.innerHTML = "";
-      const activeDice = dice.filter(die => selectedDice.has(die.id));
-
-      if (activeDice.length === 0) {
-        const empty = document.createElement("div");
-        empty.className = "empty-roll";
-        empty.textContent = "Coche au moins un dé.";
-        rollGrid.appendChild(empty);
-        return;
-      }
-
-      for (const die of activeDice) {
-        const slot = document.createElement("div");
-        slot.className = "roll-slot";
-        slot.dataset.dieId = die.id;
-
-        const name = document.createElement("div");
-        name.className = "roll-slot-name";
-        name.textContent = die.name;
-
-        const currentFace = lastResults.get(die.id) || "vide";
-        const face = createFace(currentFace, die, "big-face");
-        slot.append(name, face);
-        rollGrid.appendChild(slot);
-      }
-    }
-
-    function updateSelectedCount() {
-      const activeCount = dice.filter(die => selectedDice.has(die.id)).length;
-      selectedCount.textContent = `${activeCount} dé${activeCount > 1 ? "s" : ""}`;
-    }
-
-    function setDieSelection(id, isSelected) {
-      if (isSelected) {
-        selectedDice.add(id);
-      } else {
-        selectedDice.delete(id);
-        lastResults.delete(id);
-      }
-
-      renderSidebar();
-      renderRollGrid();
-      updateSelectedCount();
-      renderActions();
-    }
-
-    function rollDie(die) {
-      const index = Math.floor(Math.random() * die.faces.length);
-      return die.faces[index];
-    }
-
-    function wait(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
-    async function animateDie(die, slot) {
-      const faceElement = slot.querySelector(".big-face");
-      faceElement.classList.add("rolling");
-      slot.classList.remove("is-revealed");
-
-      const spinner = setInterval(() => {
-        const randomFace = die.faces[Math.floor(Math.random() * die.faces.length)];
-        setFaceContent(faceElement, randomFace, die);
-      }, 70);
-
-      await wait(620 + Math.floor(Math.random() * 160));
-      clearInterval(spinner);
-
-      const finalFace = rollDie(die);
-      lastResults.set(die.id, finalFace);
-      setFaceContent(faceElement, finalFace, die);
-      faceElement.classList.remove("rolling");
-      slot.classList.add("is-revealed");
-      setTimeout(() => slot.classList.remove("is-revealed"), 320);
-    }
-
-    function iconCounts(faceIds) {
-      const counts = new Map();
-      for (const faceId of faceIds) {
-        if (faceId === "vide") continue;
-        counts.set(faceId, (counts.get(faceId) || 0) + 1);
-      }
-      return counts;
-    }
-
-    function matchesAction(resultCounts, requiredIcons) {
-      const needed = new Map();
-      for (const icon of requiredIcons) {
-        needed.set(icon, (needed.get(icon) || 0) + 1);
-      }
-      for (const [icon, count] of needed.entries()) {
-        if ((resultCounts.get(icon) || 0) < count) return false;
-      }
-      return true;
-    }
-
-    function renderResultsStrip(faceIds) {
-      resultsStrip.innerHTML = "";
-      const nonEmpty = faceIds.filter(faceId => faceId !== "vide");
-      for (const faceId of nonEmpty) {
-        resultsStrip.appendChild(createMiniIcon(faceId));
-      }
-    }
-
-    function renderActions() {
-      const activeDice = dice.filter(die => selectedDice.has(die.id));
-
-      if (activeDice.length === 0) {
-        resultsStrip.innerHTML = "";
-        actionsContent.className = "empty-actions";
-        actionsContent.textContent = "Coche au moins un dé.";
-        return;
-      }
-
-      if (lastResults.size === 0) {
-        resultsStrip.innerHTML = "";
-        actionsContent.className = "empty-actions";
-        actionsContent.textContent = "Lance les dés pour voir les actions de base possibles.";
-        return;
-      }
-
-      const faceIds = activeDice.map(die => lastResults.get(die.id) || "vide");
-      renderResultsStrip(faceIds);
-
-      const counts = iconCounts(faceIds);
-      const matching = actionData
-        .map((action, index) => ({ ...action, index }))
-        .filter(action => matchesAction(counts, action.icons))
-        .sort((a, b) => (a.icons.length - b.icons.length) || (a.index - b.index));
-
-      if (matching.length === 0) {
-        actionsContent.className = "empty-actions";
-        actionsContent.textContent = "Aucune action de base claire ne se dégage des icônes de race obtenues.";
-        return;
-      }
-
-      actionsContent.className = "";
-      actionsContent.innerHTML = "";
-
-      const groups = [
-        { count: 1, title: "Lecture immédiate" },
-        { count: 2, title: "Combinaisons naturelles" },
-        { count: 3, title: "Combinaisons riches" }
-      ].map(group => ({
-        ...group,
-        items: matching.filter(action => action.icons.length === group.count)
-      })).filter(group => group.items.length > 0);
-
-      for (const group of groups) {
-        const section = document.createElement("section");
-        section.className = "group";
-
-        const title = document.createElement("h3");
-        title.textContent = group.title;
-        section.appendChild(title);
-
-        const grid = document.createElement("div");
-        grid.className = "actions-grid";
-
-        for (const action of group.items) {
-          const card = document.createElement("article");
-          card.className = "action-card";
-
-          const iconsRow = document.createElement("div");
-          iconsRow.className = "action-icons";
-          for (const icon of action.icons) {
-            iconsRow.appendChild(createMiniIcon(icon));
-          }
-
-          const label = document.createElement("div");
-          label.className = "action-label";
-          label.textContent = action.label;
-
-          card.append(iconsRow, label);
-          grid.appendChild(card);
-        }
-
-        section.appendChild(grid);
-        actionsContent.appendChild(section);
-      }
-    }
-
-    async function rollSelectedDice() {
-      if (isRolling) return;
-      const activeDice = dice.filter(die => selectedDice.has(die.id));
-      if (activeDice.length === 0) return;
-
-      isRolling = true;
-      rollZone.classList.add("is-rolling");
-      rollZone.setAttribute("aria-busy", "true");
-      renderRollGrid();
-
-      for (const die of activeDice) {
-        const slot = rollGrid.querySelector(`[data-die-id="${die.id}"]`);
-        if (!slot) continue;
-        await animateDie(die, slot);
-        renderActions();
-        await wait(110);
-      }
-
-      isRolling = false;
-      rollZone.classList.remove("is-rolling");
-      rollZone.removeAttribute("aria-busy");
-      renderActions();
-    }
-
-    async function loadActions() {
-      try {
-        const response = await fetch(ACTIONS_SRC, { cache: "no-store" });
-        if (!response.ok) throw new Error("HTTP " + response.status);
-        const json = await response.json();
-        if (!Array.isArray(json.actions)) throw new Error("Format JSON invalide");
-        actionData = json.actions;
-        actionsNotice.textContent = "";
-      } catch (error) {
-        actionData = FALLBACK_ACTIONS;
-        actionsNotice.textContent = "JSON externe non chargé : copie de secours utilisée pour permettre le test en local.";
-      }
-    }
-
-    rollZone.addEventListener("click", rollSelectedDice);
-    rollZone.addEventListener("keydown", event => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        rollSelectedDice();
-      }
-    });
-
-    const mjDialog = document.querySelector("#mjDialog");
-    document.querySelector("#openMj").addEventListener("click", () => mjDialog.showModal());
-    document.querySelector("#closeMj").addEventListener("click", () => mjDialog.close());
-
-    renderSidebar();
-    renderRollGrid();
-    updateSelectedCount();
-    loadActions().then(renderActions);
-  </script>
+    reserve.appendChild(section);
+  }
+}
+function changeCount(id, delta) {
+  if (isRolling) return;
+  const type=dieTypes.find(t=>t.id===id); const current=selectedCounts.get(id)||0;
+  const next=Math.max(0, Math.min(type.max, current+delta)); selectedCounts.set(id,next);
+  lastRoll=[]; renderAll();
+}
+function renderRollGrid() {
+  rollGrid.innerHTML=""; const instances=selectedInstances();
+  if(instances.length===0){ const empty=document.createElement("div"); empty.className="empty-roll"; empty.textContent="Ajoute au moins un dé depuis la réserve."; rollGrid.appendChild(empty); return; }
+  instances.forEach((inst, index)=>{
+    const slot=document.createElement("div"); slot.className="roll-slot"; slot.dataset.index=String(index);
+    const name=document.createElement("div"); name.className="roll-slot-name"; name.textContent=faces[inst.type.icon].label;
+    const rolled=lastRoll[index]?.faceId || "vide"; const face=createFace(rolled, inst.type, "big-face"); slot.append(name, face); rollGrid.appendChild(slot);
+  });
+}
+function updateSelectedCount() { const total=selectedTotal(); selectedCount.textContent=`${total} dé${total>1?"s":""} à lancer`; }
+function rollOne(type) { const all=dieFaces(type); return all[Math.floor(Math.random()*all.length)]; }
+function wait(ms) { return new Promise(r=>setTimeout(r,ms)); }
+async function animateDie(inst,index) {
+  const slot=rollGrid.querySelector(`[data-index="${index}"]`); if(!slot) return;
+  const faceEl=slot.querySelector(".big-face"); faceEl.classList.add("rolling"); slot.classList.remove("is-revealed");
+  const spinner=setInterval(()=>setFaceContent(faceEl, rollOne(inst.type), inst.type),70);
+  await wait(540+Math.floor(Math.random()*150)); clearInterval(spinner);
+  const finalFace=rollOne(inst.type); lastRoll[index]={ type:inst.type, faceId:finalFace }; setFaceContent(faceEl, finalFace, inst.type);
+  faceEl.classList.remove("rolling"); slot.classList.add("is-revealed"); setTimeout(()=>slot.classList.remove("is-revealed"),320);
+}
+function iconCounts(faceIds) { const counts=new Map(); for(const id of faceIds){ if(id!=="vide") counts.set(id,(counts.get(id)||0)+1); } return counts; }
+function matchesAction(counts, icons) { const needed=new Map(); for(const icon of icons) needed.set(icon,(needed.get(icon)||0)+1); for(const [icon,n] of needed) if((counts.get(icon)||0)<n) return false; return true; }
+function renderResultsStrip(faceIds) { resultsStrip.innerHTML=""; faceIds.filter(id=>id!=="vide").forEach(id=>resultsStrip.appendChild(createMiniIcon(id))); }
+function renderActions() {
+  if(selectedTotal()===0){ resultsStrip.innerHTML=""; actionsContent.className="empty-actions"; actionsContent.textContent="Ajoute au moins un dé."; return; }
+  if(lastRoll.length===0){ resultsStrip.innerHTML=""; actionsContent.className="empty-actions"; actionsContent.textContent="Lance les dés pour voir les actions de base possibles."; return; }
+  const faceIds=lastRoll.map(r=>r.faceId); renderResultsStrip(faceIds);
+  const counts=iconCounts(faceIds); const matching=actionData.map((a,i)=>({...a,index:i})).filter(a=>matchesAction(counts,a.icons)).sort((a,b)=>(a.icons.length-b.icons.length)||(a.index-b.index));
+  if(matching.length===0){ actionsContent.className="empty-actions"; actionsContent.textContent="Aucune action de base claire ne se dégage des icônes de race obtenues."; return; }
+  actionsContent.className=""; actionsContent.innerHTML="";
+  [{n:1,t:"Lecture immédiate"},{n:2,t:"Combinaisons naturelles"},{n:3,t:"Combinaisons riches"}].forEach(group=>{
+    const items=matching.filter(a=>a.icons.length===group.n); if(!items.length) return;
+    const sec=document.createElement("section"); sec.className="group"; const h=document.createElement("h3"); h.textContent=group.t; sec.appendChild(h);
+    const grid=document.createElement("div"); grid.className="actions-grid";
+    items.forEach(action=>{ const card=document.createElement("article"); card.className="action-card"; const icons=document.createElement("div"); icons.className="action-icons"; action.icons.forEach(i=>icons.appendChild(createMiniIcon(i))); const lab=document.createElement("div"); lab.className="action-label"; lab.textContent=action.label; card.append(icons,lab); grid.appendChild(card); });
+    sec.appendChild(grid); actionsContent.appendChild(sec);
+  });
+}
+async function rollSelectedDice() {
+  if(isRolling||selectedTotal()===0) return;
+  isRolling=true; rollZone.classList.add("is-rolling"); rollZone.setAttribute("aria-busy","true");
+  const instances=selectedInstances(); lastRoll=[]; renderRollGrid(); renderActions();
+  for(let i=0;i<instances.length;i++){ await animateDie(instances[i],i); renderActions(); await wait(80); }
+  isRolling=false; rollZone.classList.remove("is-rolling"); rollZone.removeAttribute("aria-busy"); renderActions();
+}
+async function loadActions() {
+  try{ const res=await fetch(ACTIONS_SRC,{cache:"no-store"}); if(!res.ok) throw new Error(res.status); const json=await res.json(); if(!Array.isArray(json.actions)) throw new Error("format"); actionData=json.actions; actionsNotice.textContent=""; }
+  catch(e){ actionData=FALLBACK_ACTIONS; actionsNotice.textContent="JSON externe non chargé : copie de secours utilisée pour permettre le test en local."; }
+}
+function renderAll() { renderReserve(); renderRollGrid(); updateSelectedCount(); renderActions(); }
+rollZone.addEventListener("click", rollSelectedDice);
+rollZone.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); rollSelectedDice(); } });
+const mjDialog=document.querySelector("#mjDialog"); document.querySelector("#openMj").addEventListener("click",()=>mjDialog.showModal()); document.querySelector("#closeMj").addEventListener("click",()=>mjDialog.close());
+renderAll(); loadActions().then(renderActions);
+</script>
 </body>
 </html>

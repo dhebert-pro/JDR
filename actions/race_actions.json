@@ -1,7 +1,7 @@
 {
-  "version": 2,
-  "scope": "race_only",
-  "note": "Actions de base liées aux icônes de race. L'ordre du tableau est l'ordre d'affichage.",
+  "version": 3,
+  "scope": "race_actions_only",
+  "note": "Actions gérées par JSON. L'ordre du tableau est l'ordre d'affichage ; aucun champ order n'est utilisé.",
   "actions": [
     {
       "id": "regarder",
