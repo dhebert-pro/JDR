@@ -518,6 +518,84 @@
       outline-offset: 2px;
     }
 
+
+    .lore-body {
+      display: grid;
+      gap: 12px;
+    }
+
+    .lore-section {
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.54);
+      border: 1px solid rgba(202, 166, 74, 0.18);
+    }
+
+    .lore-section.secret {
+      background: rgba(255, 246, 216, 0.72);
+      border-color: rgba(173, 125, 38, 0.3);
+    }
+
+    .lore-section h4 {
+      margin: 0 0 6px;
+      color: #4d3d18;
+    }
+
+    .lore-section p {
+      margin: 0;
+    }
+
+    .mj-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .player-show-button {
+      color: #2f250c;
+      background: linear-gradient(#f4d982, #cda141);
+      border: 1px solid rgba(131, 93, 21, 0.22);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .player-view-dialog {
+      width: min(1100px, calc(100% - 22px));
+      background: #090b09;
+      border-color: rgba(215, 184, 93, 0.68);
+    }
+
+    .player-view-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 12px;
+      color: #fff1c0;
+      border-bottom: 1px solid rgba(215, 184, 93, 0.32);
+    }
+
+    .player-view-header button {
+      color: #2f250c;
+      background: linear-gradient(#f4d982, #cda141);
+      border: 1px solid rgba(131, 93, 21, 0.22);
+    }
+
+    .player-view-body {
+      display: grid;
+      place-items: center;
+      padding: 10px;
+      min-height: 220px;
+    }
+
+    .player-view-body img {
+      display: block;
+      max-width: 100%;
+      max-height: min(78vh, 780px);
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
     code {
       padding: 2px 6px;
       border-radius: 8px;
@@ -583,43 +661,93 @@
 
   <dialog id="mjDialog">
     <div class="modal-header">
-      <h2>Menu MJ — Notes cachées</h2>
-      <small>Lore utilisable pendant la partie.</small>
+      <h2>Menu MJ — Lore</h2>
+      <small>Notes courtes à développer à l’oral.</small>
     </div>
-    <div class="modal-body">
-      <h4>Elyra</h4>
-      <p>
-        Elyra est une jeune elfe encore débutante. Elle n’a pas l’assurance des grandes héroïnes :
-        elle avance avec prudence, curiosité et une forme de mélancolie.
-      </p>
+    <div class="modal-body lore-body">
+      <section class="lore-section">
+        <h4>Histoire d’Elyra — à dire aux joueurs</h4>
+        <p>
+          Elyra est une jeune elfe sensible aux ruines anciennes. Elle ne cherche pas la gloire :
+          elle veut comprendre pourquoi certaines pierres semblent encore chanter quand tout le reste s’est tu.
+        </p>
+      </section>
 
-      <h4>Accordeuse de ruines</h4>
-      <p>
-        Elle ressent les lieux anciens comme d’autres entendraient une musique lointaine.
-        Les pierres, les fissures, les signes, les échos et les liens invisibles lui parlent
-        par impressions, vibrations et détails presque imperceptibles. Son tempérament colore toujours
-        sa manière d'agir : elle questionne, protège, attend, compatit ou ressent ce qui s'est fané.
-      </p>
+      <section class="lore-section secret">
+        <h4>Histoire d’Elyra — MJ seulement</h4>
+        <p>
+          Sa mère, ancienne accordeuse, a disparu en étudiant Asteronde. Elyra possède un fragment de son carnet :
+          « Si les pierres reprennent leur chant, ne laisse personne accorder le Cœur à ma place. »
+        </p>
+      </section>
 
-      <h4>Tempérament</h4>
-      <ul>
-        <li><strong>Curieuse</strong> : elle veut comprendre ce qui a été laissé derrière.</li>
-        <li><strong>Prudente</strong> : elle préfère observer avant de troubler un lieu ancien.</li>
-        <li><strong>Mélancolique</strong> : les ruines lui donnent l’impression d’écouter des souvenirs perdus.</li>
-      </ul>
+      <section class="lore-section">
+        <h4>Le donjon — à dire aux joueurs</h4>
+        <p>
+          Asteronde était un sanctuaire elfique bâti pour garder la mémoire des lieux, des serments et des morts.
+          Aujourd’hui, ses ruines dorment dans la forêt, mais leur écho recommence à se faire entendre.
+        </p>
+      </section>
 
-      <h4>Motivation</h4>
-      <p>
-        Elyra n’est pas envoyée officiellement. Sa démarche est personnelle :
-        quelque chose dans les ruines l’attire, l’inquiète ou l’appelle.
-      </p>
+      <section class="lore-section secret">
+        <h4>Le donjon — MJ seulement</h4>
+        <p>
+          Asteronde enferme l’Archonte Fêlé, ancien gardien chargé de préserver les souvenirs.
+          Il a fini par croire que protéger signifiait figer toute chose. La mère d’Elyra l’a retenu,
+          mais son sceau s’affaiblit.
+        </p>
+      </section>
+
+      <section class="lore-section">
+        <h4>Salle 1 — à dire aux joueurs</h4>
+        <p>
+          Un ancien chemin de pèlerinage traverse la forêt. Des pierres dressées, couvertes de mousse,
+          bordent la route. Quand le vent passe entre elles, on croit entendre un chant très faible,
+          brisé, presque oublié.
+        </p>
+        <div class="mj-actions">
+          <button class="player-show-button" type="button" data-player-image="img/salles/salle01.png" data-player-title="Le chemin des pierres chantantes">
+            Afficher la salle
+          </button>
+        </div>
+      </section>
+
+      <section class="lore-section secret">
+        <h4>Salle 1 — MJ seulement</h4>
+        <p>
+          Le chemin teste les intrus : une dalle peut s’enfoncer, une pierre peut libérer une poussière argentée,
+          mais le danger reste un avertissement. Près d’une pierre couchée, Elyra peut trouver quelques pièces
+          anciennes et l’Éclat d’accordage faible.
+        </p>
+        <div class="mj-actions">
+          <button class="player-show-button" type="button" data-player-image="img/items/eclatAccordageFaible.png" data-player-title="Éclat d’accordage faible">
+            Afficher l’objet
+          </button>
+        </div>
+      </section>
+
+      <section class="lore-section secret">
+        <h4>Éclat d’accordage faible — MJ seulement</h4>
+        <p>
+          Petit cristal tiède. Il vibre près d’un lieu instable ou d’un écho ancien.
+          Usage simple : donner un indice léger ou autoriser une petite relance liée aux ruines.
+        </p>
+      </section>
     </div>
     <div class="modal-actions">
       <button id="closeMj" type="button">Fermer</button>
     </div>
   </dialog>
 
-  <script>
+  <dialog id="playerViewDialog" class="player-view-dialog">
+    <div class="player-view-header">
+      <strong id="playerViewTitle"></strong>
+      <button id="closePlayerView" type="button">Fermer</button>
+    </div>
+    <div class="player-view-body">
+      <img id="playerViewImage" src="" alt="" />
+    </div>
+  </dialog><script>
     const FRAME_SRC = "img/de.png";
     const ACTIONS_SRC = "actions/race_actions.json";
     const MAX_SELECTED_DICE = 3;
@@ -1041,6 +1169,24 @@
     const mjDialog = document.querySelector("#mjDialog");
     document.querySelector("#openMj").addEventListener("click", () => mjDialog.showModal());
     document.querySelector("#closeMj").addEventListener("click", () => mjDialog.close());
+
+    const playerViewDialog = document.querySelector("#playerViewDialog");
+    const playerViewImage = document.querySelector("#playerViewImage");
+    const playerViewTitle = document.querySelector("#playerViewTitle");
+
+    document.querySelectorAll(".player-show-button").forEach(button => {
+      button.addEventListener("click", () => {
+        playerViewImage.src = button.dataset.playerImage;
+        playerViewImage.alt = button.dataset.playerTitle || "";
+        playerViewTitle.textContent = button.dataset.playerTitle || "";
+        playerViewDialog.showModal();
+      });
+    });
+
+    document.querySelector("#closePlayerView").addEventListener("click", () => {
+      playerViewDialog.close();
+      playerViewImage.removeAttribute("src");
+    });
 
     loadActions().then(renderAll);
     renderAll();
