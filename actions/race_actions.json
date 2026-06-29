@@ -1,7 +1,7 @@
 {
-  "version": 5,
-  "scope": "race_class_personality",
-  "note": "Actions liées aux icônes de race, de classe et de personnalité. Pas de champ order : l'ordre du tableau sert d'ordre d'affichage.",
+  "version": 7,
+  "scope": "race_class_personality_items",
+  "note": "Actions liées aux icônes de race, de classe, de personnalité et aux faces d’objets. L’Éclat d’accordage faible apporte deux dés distincts : Lueur et Frémissement. Pas de champ order : l'ordre du tableau sert d'ordre d'affichage.",
   "actions": [
     {
       "id": "oeil_regarder",
@@ -4202,6 +4202,682 @@
         "fleurFanee",
         "lien",
         "empreinte"
+      ]
+    },
+    {
+      "id": "eaflueur_reveler_une_piste_faible",
+      "label": "Révéler une piste faible",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur"
+      ]
+    },
+    {
+      "id": "eaffremissement_sentir_une_instabilite",
+      "label": "Sentir une instabilité",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement"
+      ]
+    },
+    {
+      "id": "eaflueur_oeil_reveler_un_detail_visible",
+      "label": "Révéler un détail visible",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "oeil"
+      ]
+    },
+    {
+      "id": "eaflueur_oreille_rendre_perceptible_un_son_faible",
+      "label": "Rendre perceptible un son faible",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "oreille"
+      ]
+    },
+    {
+      "id": "eaflueur_main_indiquer_quoi_examiner_au_toucher",
+      "label": "Indiquer quoi examiner au toucher",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "main"
+      ]
+    },
+    {
+      "id": "eaflueur_empreinte_faire_ressortir_une_piste",
+      "label": "Faire ressortir une piste",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "eaflueur_plume_reveler_un_passage_discret",
+      "label": "Révéler un passage discret",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "plume"
+      ]
+    },
+    {
+      "id": "eaffremissement_oeil_apercevoir_un_danger_discret",
+      "label": "Apercevoir un danger discret",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "oeil"
+      ]
+    },
+    {
+      "id": "eaffremissement_oreille_entendre_une_vibration_inquietante",
+      "label": "Entendre une vibration inquiétante",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "oreille"
+      ]
+    },
+    {
+      "id": "eaffremissement_main_sentir_un_risque_au_toucher",
+      "label": "Sentir un risque au toucher",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "main"
+      ]
+    },
+    {
+      "id": "eaffremissement_empreinte_sentir_un_sol_ou_un_passage_instable",
+      "label": "Sentir un sol ou un passage instable",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "eaffremissement_plume_passer_sans_troubler_un_equilibre_fragile",
+      "label": "Passer sans troubler un équilibre fragile",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "plume"
+      ]
+    },
+    {
+      "id": "eaflueur_pierre_reveler_une_structure_importante",
+      "label": "Révéler une structure importante",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "pierre"
+      ]
+    },
+    {
+      "id": "eaflueur_fissure_faire_apparaitre_une_faiblesse",
+      "label": "Faire apparaître une faiblesse",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "fissure"
+      ]
+    },
+    {
+      "id": "eaflueur_symbole_eclairer_un_signe_efface",
+      "label": "Éclairer un signe effacé",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "symbole"
+      ]
+    },
+    {
+      "id": "eaflueur_echo_faire_naitre_un_echo_faible",
+      "label": "Faire naître un écho faible",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "echo"
+      ]
+    },
+    {
+      "id": "eaflueur_lien_reveler_une_connexion",
+      "label": "Révéler une connexion",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "lien"
+      ]
+    },
+    {
+      "id": "eaffremissement_pierre_sentir_une_structure_sous_tension",
+      "label": "Sentir une structure sous tension",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "pierre"
+      ]
+    },
+    {
+      "id": "eaffremissement_fissure_sentir_une_rupture_proche",
+      "label": "Sentir une rupture proche",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "fissure"
+      ]
+    },
+    {
+      "id": "eaffremissement_symbole_sentir_un_signe_dangereux",
+      "label": "Sentir un signe dangereux",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "symbole"
+      ]
+    },
+    {
+      "id": "eaffremissement_echo_sentir_une_resonance_instable",
+      "label": "Sentir une résonance instable",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "echo"
+      ]
+    },
+    {
+      "id": "eaffremissement_lien_sentir_un_lien_fragile",
+      "label": "Sentir un lien fragile",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "lien"
+      ]
+    },
+    {
+      "id": "eaflueur_question_obtenir_une_intuition_vague",
+      "label": "Obtenir une intuition vague",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "question"
+      ]
+    },
+    {
+      "id": "eaflueur_bouclier_reveler_ce_quil_vaut_mieux_eviter",
+      "label": "Révéler ce qu’il vaut mieux éviter",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "bouclier"
+      ]
+    },
+    {
+      "id": "eaflueur_sablier_comprendre_quil_faut_attendre",
+      "label": "Comprendre qu’il faut attendre",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "sablier"
+      ]
+    },
+    {
+      "id": "eaflueur_coeur_percevoir_une_emotion_cachee",
+      "label": "Percevoir une émotion cachée",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "coeur"
+      ]
+    },
+    {
+      "id": "eaflueur_fleurfanee_reveler_une_trace_du_passe",
+      "label": "Révéler une trace du passé",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "fleurFanee"
+      ]
+    },
+    {
+      "id": "eaffremissement_question_sentir_que_quelque_chose_cloche",
+      "label": "Sentir que quelque chose cloche",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "question"
+      ]
+    },
+    {
+      "id": "eaffremissement_bouclier_pressentir_un_danger",
+      "label": "Pressentir un danger",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "bouclier"
+      ]
+    },
+    {
+      "id": "eaffremissement_sablier_sentir_que_le_moment_est_mauvais",
+      "label": "Sentir que le moment est mauvais",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "sablier"
+      ]
+    },
+    {
+      "id": "eaffremissement_coeur_percevoir_un_malaise",
+      "label": "Percevoir un malaise",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "coeur"
+      ]
+    },
+    {
+      "id": "eaffremissement_fleurfanee_ressentir_une_douleur_ancienne",
+      "label": "Ressentir une douleur ancienne",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "fleurFanee"
+      ]
+    },
+    {
+      "id": "eaflueur_pierre_oeil_voir_lelement_important_dune_structure",
+      "label": "Voir l’élément important d’une structure",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "pierre",
+        "oeil"
+      ]
+    },
+    {
+      "id": "eaflueur_pierre_main_trouver_ou_tester_la_solidite",
+      "label": "Trouver où tester la solidité",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "pierre",
+        "main"
+      ]
+    },
+    {
+      "id": "eaflueur_fissure_oeil_reperer_une_faille_discrete",
+      "label": "Repérer une faille discrète",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "fissure",
+        "oeil"
+      ]
+    },
+    {
+      "id": "eaflueur_fissure_empreinte_trouver_par_ou_suivre_une_fissure",
+      "label": "Trouver par où suivre une fissure",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "fissure",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "eaflueur_symbole_oeil_lire_un_signe_presque_efface",
+      "label": "Lire un signe presque effacé",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "symbole",
+        "oeil"
+      ]
+    },
+    {
+      "id": "eaflueur_symbole_main_trouver_comment_activer_un_signe",
+      "label": "Trouver comment activer un signe",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "symbole",
+        "main"
+      ]
+    },
+    {
+      "id": "eaflueur_echo_oreille_rendre_un_echo_comprehensible",
+      "label": "Rendre un écho compréhensible",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "echo",
+        "oreille"
+      ]
+    },
+    {
+      "id": "eaflueur_echo_empreinte_trouver_la_direction_dun_echo",
+      "label": "Trouver la direction d’un écho",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "echo",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "eaflueur_lien_oeil_voir_une_correspondance_cachee",
+      "label": "Voir une correspondance cachée",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "lien",
+        "oeil"
+      ]
+    },
+    {
+      "id": "eaflueur_lien_main_trouver_le_point_dune_connexion",
+      "label": "Trouver le point d’une connexion",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "lien",
+        "main"
+      ]
+    },
+    {
+      "id": "eaffremissement_pierre_empreinte_sentir_un_appui_dangereux",
+      "label": "Sentir un appui dangereux",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "pierre",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "eaffremissement_pierre_plume_passer_sans_peser_sur_une_structure",
+      "label": "Passer sans peser sur une structure",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "pierre",
+        "plume"
+      ]
+    },
+    {
+      "id": "eaffremissement_fissure_main_sentir_quune_faille_va_ceder",
+      "label": "Sentir qu’une faille va céder",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "fissure",
+        "main"
+      ]
+    },
+    {
+      "id": "eaffremissement_fissure_plume_passer_sans_faire_craquer",
+      "label": "Passer sans faire craquer",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "fissure",
+        "plume"
+      ]
+    },
+    {
+      "id": "eaffremissement_symbole_main_sentir_quun_signe_reagit_au_toucher",
+      "label": "Sentir qu’un signe réagit au toucher",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "symbole",
+        "main"
+      ]
+    },
+    {
+      "id": "eaffremissement_symbole_plume_approcher_un_symbole_sans_le_declencher",
+      "label": "Approcher un symbole sans le déclencher",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "symbole",
+        "plume"
+      ]
+    },
+    {
+      "id": "eaffremissement_echo_oreille_entendre_une_resonance_dangereuse",
+      "label": "Entendre une résonance dangereuse",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "echo",
+        "oreille"
+      ]
+    },
+    {
+      "id": "eaffremissement_echo_plume_eviter_de_produire_un_echo",
+      "label": "Éviter de produire un écho",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "echo",
+        "plume"
+      ]
+    },
+    {
+      "id": "eaffremissement_lien_main_sentir_une_connexion_fragile",
+      "label": "Sentir une connexion fragile",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "lien",
+        "main"
+      ]
+    },
+    {
+      "id": "eaffremissement_lien_plume_traverser_une_connexion_sans_la_troubler",
+      "label": "Traverser une connexion sans la troubler",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "lien",
+        "plume"
+      ]
+    },
+    {
+      "id": "eaflueur_question_symbole_reveler_une_enigme_ancienne",
+      "label": "Révéler une énigme ancienne",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "question",
+        "symbole"
+      ]
+    },
+    {
+      "id": "eaflueur_question_lien_comprendre_quun_element_est_relie_a_un_autre",
+      "label": "Comprendre qu’un élément est relié à un autre",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "question",
+        "lien"
+      ]
+    },
+    {
+      "id": "eaflueur_bouclier_fissure_reveler_une_faiblesse_dangereuse",
+      "label": "Révéler une faiblesse dangereuse",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "bouclier",
+        "fissure"
+      ]
+    },
+    {
+      "id": "eaflueur_sablier_echo_attendre_que_lecho_devienne_clair",
+      "label": "Attendre que l’écho devienne clair",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "sablier",
+        "echo"
+      ]
+    },
+    {
+      "id": "eaflueur_coeur_echo_percevoir_une_reponse_sensible",
+      "label": "Percevoir une réponse sensible",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "coeur",
+        "echo"
+      ]
+    },
+    {
+      "id": "eaflueur_fleurfanee_symbole_reveler_un_signe_du_passe",
+      "label": "Révéler un signe du passé",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "fleurFanee",
+        "symbole"
+      ]
+    },
+    {
+      "id": "eaffremissement_question_lien_douter_dune_connexion",
+      "label": "Douter d’une connexion",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "question",
+        "lien"
+      ]
+    },
+    {
+      "id": "eaffremissement_bouclier_pierre_pressentir_une_menace_structurelle",
+      "label": "Pressentir une menace structurelle",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "bouclier",
+        "pierre"
+      ]
+    },
+    {
+      "id": "eaffremissement_sablier_empreinte_sentir_que_ce_nest_pas_le_moment_de_passer",
+      "label": "Sentir que ce n’est pas le moment de passer",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "sablier",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "eaffremissement_coeur_oreille_ressentir_un_malaise_dans_une_voix_ou_un_son",
+      "label": "Ressentir un malaise dans une voix ou un son",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "coeur",
+        "oreille"
+      ]
+    },
+    {
+      "id": "eaffremissement_fleurfanee_echo_entendre_une_douleur_ancienne",
+      "label": "Entendre une douleur ancienne",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "fleurFanee",
+        "echo"
+      ]
+    },
+    {
+      "id": "eaflueur_pierre_fissure_reveler_le_point_fragile_dune_structure",
+      "label": "Révéler le point fragile d’une structure",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "pierre",
+        "fissure"
+      ]
+    },
+    {
+      "id": "eaflueur_pierre_symbole_reveler_une_inscription_gravee",
+      "label": "Révéler une inscription gravée",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "pierre",
+        "symbole"
+      ]
+    },
+    {
+      "id": "eaflueur_symbole_lien_reveler_que_plusieurs_signes_sont_lies",
+      "label": "Révéler que plusieurs signes sont liés",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "symbole",
+        "lien"
+      ]
+    },
+    {
+      "id": "eaflueur_echo_lien_reveler_une_resonance_reliee_a_autre_chose",
+      "label": "Révéler une résonance reliée à autre chose",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafLueur",
+        "echo",
+        "lien"
+      ]
+    },
+    {
+      "id": "eaffremissement_pierre_fissure_sentir_un_point_de_rupture",
+      "label": "Sentir un point de rupture",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "pierre",
+        "fissure"
+      ]
+    },
+    {
+      "id": "eaffremissement_fissure_lien_sentir_une_connexion_en_train_de_ceder",
+      "label": "Sentir une connexion en train de céder",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "fissure",
+        "lien"
+      ]
+    },
+    {
+      "id": "eaffremissement_symbole_echo_sentir_quun_symbole_va_repondre",
+      "label": "Sentir qu’un symbole va répondre",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "symbole",
+        "echo"
+      ]
+    },
+    {
+      "id": "eaffremissement_echo_lien_sentir_une_onde_qui_se_propage",
+      "label": "Sentir une onde qui se propage",
+      "category": "Objet — Éclat d’accordage faible",
+      "icons": [
+        "eafFremissement",
+        "echo",
+        "lien"
       ]
     }
   ]
