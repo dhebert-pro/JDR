@@ -242,6 +242,53 @@
       outline: none;
     }
 
+
+    .code-panel {
+      justify-self: end;
+      max-width: 210px;
+      margin-top: -2px;
+      color: #6b5a32;
+      font-size: 0.82rem;
+    }
+
+    .code-panel summary {
+      cursor: pointer;
+      user-select: none;
+      opacity: 0.72;
+      font-weight: 850;
+    }
+
+    .code-form {
+      display: flex;
+      gap: 5px;
+      margin-top: 6px;
+    }
+
+    .code-form input {
+      width: 74px;
+      padding: 6px 7px;
+      border-radius: 9px;
+      border: 1px solid rgba(180, 139, 42, 0.32);
+      background: rgba(255, 255, 255, 0.64);
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: 0.12em;
+    }
+
+    .code-form button {
+      padding: 6px 9px;
+      color: #4b3810;
+      background: rgba(255, 255, 255, 0.62);
+      border: 1px solid rgba(180, 139, 42, 0.28);
+    }
+
+    .code-status {
+      min-height: 1.2em;
+      margin-top: 5px;
+      font-weight: 800;
+      color: #6b5a32;
+    }
+
     .roll-mode-panel {
       display: flex;
       align-items: center;
@@ -769,6 +816,15 @@
           </div>
         </section>
 
+        <details class="code-panel">
+          <summary>Code</summary>
+          <form class="code-form" id="rewardCodeForm">
+            <input id="rewardCodeInput" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" aria-label="Code secret" />
+            <button type="submit">OK</button>
+          </form>
+          <div class="code-status" id="rewardCodeStatus" aria-live="polite"></div>
+        </details>
+
 <section class="roll-zone" id="rollZone" role="button" tabindex="0" aria-label="Lancer les dés sélectionnés">
           <div class="roll-topline">
             <strong>Zone de lancer</strong>
@@ -870,6 +926,15 @@
             </button>
           </div>
         </article>
+
+        <article class="lore-card">
+          <h4>Codes MJ</h4>
+          <p><span class="mj-line">MJ : code Éclat d’accordage faible : 1847.</span></p>
+          <p><span class="mj-line">MJ : ce code ajoute 1 dé Lueur et 1 dé Frémissement.</span></p>
+          <p><span class="mj-line">MJ : code petit montant d’or : 6021.</span></p>
+          <p><span class="mj-line">MJ : ce code ajoute 1 face Pièce d’or au dé d’or. Maximum : 6.</span></p>
+        </article>
+
       </section>
     </div>
 
@@ -942,7 +1007,7 @@
         group: "Objet",
         color: "#d8ecff",
         stripe: "#7fb6e8",
-        stock: 1,
+        stock: 0,
         chances: 2,
         displayIcon: "eafLueur",
         outcomes: ["eafLueur", "eafLueur", "vide", "vide", "vide", "vide"]
@@ -954,7 +1019,7 @@
         group: "Objet",
         color: "#d8ecff",
         stripe: "#7fb6e8",
-        stock: 1,
+        stock: 0,
         chances: 2,
         displayIcon: "eafFremissement",
         outcomes: ["eafFremissement", "eafFremissement", "vide", "vide", "vide", "vide"]
@@ -966,8 +1031,95 @@
       id: "gold-1",
       name: "Dé d’or",
       color: "#f1d47b",
-      outcomes: ["pieceOr", "vide", "vide", "vide", "vide", "vide"]
+      outcomes: ["vide", "vide", "vide", "vide", "vide", "vide"]
     };
+
+    const REWARD_CODES = {
+      eclat: "1847",
+      gold: "6021"
+    };
+
+    const savedProgress = (() => {
+      try {
+        return JSON.parse(localStorage.getItem("elyraProgress") || "{}");
+      } catch (error) {
+        return {};
+      }
+    })();
+
+    function getTypeById(typeId) {
+      return dieTypes.find(type => type.id === typeId);
+    }
+
+    function setTypeStock(typeId, value) {
+      const type = getTypeById(typeId);
+      if (type) type.stock = Math.max(0, value);
+    }
+
+    function applySavedProgress() {
+      setTypeStock("item-eaf-lueur", savedProgress.eafLueurStock || 0);
+      setTypeStock("item-eaf-fremissement", savedProgress.eafFremissementStock || 0);
+
+      const goldFaces = Math.max(0, Math.min(6, savedProgress.goldFaces || 0));
+      goldDie.outcomes = Array.from({ length: 6 }, (_, index) => index < goldFaces ? "pieceOr" : "vide");
+    }
+
+    function saveProgress() {
+      try {
+        localStorage.setItem("elyraProgress", JSON.stringify({
+          eafLueurStock: getTypeById("item-eaf-lueur")?.stock || 0,
+          eafFremissementStock: getTypeById("item-eaf-fremissement")?.stock || 0,
+          goldFaces: goldDie.outcomes.filter(face => face === "pieceOr").length
+        }));
+      } catch (error) {
+        // Sauvegarde locale indisponible : on garde l'état pour la session.
+      }
+    }
+
+    function showCodeStatus(message) {
+      rewardCodeStatus.textContent = message;
+      window.setTimeout(() => {
+        if (rewardCodeStatus.textContent === message) rewardCodeStatus.textContent = "";
+      }, 2200);
+    }
+
+    function addEclatReward() {
+      setTypeStock("item-eaf-lueur", (getTypeById("item-eaf-lueur")?.stock || 0) + 1);
+      setTypeStock("item-eaf-fremissement", (getTypeById("item-eaf-fremissement")?.stock || 0) + 1);
+      saveProgress();
+      renderAll();
+      showCodeStatus("Éclat ajouté.");
+    }
+
+    function addGoldReward() {
+      const firstEmpty = goldDie.outcomes.indexOf("vide");
+      if (firstEmpty === -1) {
+        showCodeStatus("Dé d’or au maximum.");
+        return;
+      }
+
+      goldDie.outcomes[firstEmpty] = "pieceOr";
+      lastGoldResult = "vide";
+      saveProgress();
+      renderGoldFacesPopover();
+      renderRollGrid();
+      showCodeStatus("+1 face or.");
+    }
+
+    function handleRewardCode(code) {
+      if (code === REWARD_CODES.eclat) {
+        addEclatReward();
+        return;
+      }
+
+      if (code === REWARD_CODES.gold) {
+        addGoldReward();
+        return;
+      }
+
+      showCodeStatus("Code inconnu.");
+    }
+
 
     let rollMode = "normal";
     let lastGoldResult = "vide";
@@ -1016,9 +1168,13 @@ const FALLBACK_ACTIONS = [{"id": "oeil_regarder", "label": "Regarder", "category
     const rollZone = document.querySelector("#rollZone");
     const resultsStrip = document.querySelector("#resultsStrip");
     const actionsContent = document.querySelector("#actionsContent");
+    const rewardCodeForm = document.querySelector("#rewardCodeForm");
+    const rewardCodeInput = document.querySelector("#rewardCodeInput");
+    const rewardCodeStatus = document.querySelector("#rewardCodeStatus");
+
 
     function getDieType(typeId) {
-      return dieTypes.find(type => type.id === typeId);
+      return getTypeById(typeId);
     }
 
     function selectedCountForType(typeId) {
@@ -1118,7 +1274,8 @@ const FALLBACK_ACTIONS = [{"id": "oeil_regarder", "label": "Regarder", "category
       for (const group of groups) {
         const types = dieTypes.filter(type => {
           const label = `${labelForType(type)} ${type.group}`.toLowerCase();
-          return type.group === group && (!query || label.includes(query));
+          const possessed = type.stock > 0 || selectedCountForType(type.id) > 0;
+          return type.group === group && possessed && (!query || label.includes(query));
         });
 
         if (types.length === 0) continue;
@@ -1451,6 +1608,14 @@ const FALLBACK_ACTIONS = [{"id": "oeil_regarder", "label": "Regarder", "category
     }
 
     diceSearch.addEventListener("input", renderDicePool);
+
+    rewardCodeForm.addEventListener("submit", event => {
+      event.preventDefault();
+      const code = rewardCodeInput.value.trim();
+      rewardCodeInput.value = "";
+      handleRewardCode(code);
+    });
+
     normalModeButton.addEventListener("click", () => setRollMode("normal"));
     goldModeButton.addEventListener("click", () => setRollMode("gold"));
 
@@ -1498,6 +1663,7 @@ const FALLBACK_ACTIONS = [{"id": "oeil_regarder", "label": "Regarder", "category
       playerViewImage.removeAttribute("src");
     });
 
+    applySavedProgress();
     renderGoldFacesPopover();
     loadActions().then(renderAll);
     renderAll();
