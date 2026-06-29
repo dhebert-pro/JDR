@@ -1,0 +1,373 @@
+{
+  "version": 2,
+  "scope": "race_only",
+  "note": "Actions de base liées aux icônes de race. L'ordre du tableau est l'ordre d'affichage.",
+  "actions": [
+    {
+      "id": "regarder",
+      "label": "Regarder",
+      "category": "Perception",
+      "icons": [
+        "oeil"
+      ]
+    },
+    {
+      "id": "ecouter",
+      "label": "Écouter",
+      "category": "Perception",
+      "icons": [
+        "oreille"
+      ]
+    },
+    {
+      "id": "toucher",
+      "label": "Toucher / palper",
+      "category": "Perception",
+      "icons": [
+        "main"
+      ]
+    },
+    {
+      "id": "marcher",
+      "label": "Marcher",
+      "category": "Déplacement",
+      "icons": [
+        "empreinte"
+      ]
+    },
+    {
+      "id": "sauter",
+      "label": "Sauter",
+      "category": "Déplacement",
+      "icons": [
+        "plume"
+      ]
+    },
+    {
+      "id": "observer_attentivement",
+      "label": "Observer attentivement",
+      "category": "Perception",
+      "icons": [
+        "oeil",
+        "oeil"
+      ]
+    },
+    {
+      "id": "ecouter_attentivement",
+      "label": "Écouter attentivement",
+      "category": "Perception",
+      "icons": [
+        "oreille",
+        "oreille"
+      ]
+    },
+    {
+      "id": "sentir_presence",
+      "label": "Sentir une présence proche",
+      "category": "Perception",
+      "icons": [
+        "oeil",
+        "oreille"
+      ]
+    },
+    {
+      "id": "chercher_visuellement",
+      "label": "Chercher visuellement",
+      "category": "Perception",
+      "icons": [
+        "oeil",
+        "main"
+      ]
+    },
+    {
+      "id": "fouiller_tatons",
+      "label": "Fouiller à tâtons",
+      "category": "Perception",
+      "icons": [
+        "main",
+        "main"
+      ]
+    },
+    {
+      "id": "estimer_distance",
+      "label": "Estimer une distance",
+      "category": "Perception",
+      "icons": [
+        "oeil",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "suivre_regard",
+      "label": "Suivre du regard",
+      "category": "Perception",
+      "icons": [
+        "oeil",
+        "plume"
+      ]
+    },
+    {
+      "id": "suivre_bruit",
+      "label": "Suivre un bruit",
+      "category": "Déplacement",
+      "icons": [
+        "oreille",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "approcher_sans_bruit",
+      "label": "Approcher sans bruit",
+      "category": "Déplacement",
+      "icons": [
+        "oreille",
+        "plume"
+      ]
+    },
+    {
+      "id": "grimper",
+      "label": "Grimper",
+      "category": "Déplacement",
+      "icons": [
+        "main",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "se_hisser",
+      "label": "Se hisser",
+      "category": "Déplacement",
+      "icons": [
+        "main",
+        "plume"
+      ]
+    },
+    {
+      "id": "courir",
+      "label": "Courir",
+      "category": "Déplacement",
+      "icons": [
+        "empreinte",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "avancer_discretement",
+      "label": "Avancer discrètement",
+      "category": "Déplacement",
+      "icons": [
+        "empreinte",
+        "plume"
+      ]
+    },
+    {
+      "id": "bondir",
+      "label": "Bondir",
+      "category": "Déplacement",
+      "icons": [
+        "plume",
+        "plume"
+      ]
+    },
+    {
+      "id": "reagir_vite",
+      "label": "Réagir vite",
+      "category": "Réaction",
+      "icons": [
+        "oeil",
+        "oreille",
+        "main"
+      ]
+    },
+    {
+      "id": "avancer_prudemment",
+      "label": "Avancer prudemment",
+      "category": "Déplacement",
+      "icons": [
+        "oeil",
+        "oreille",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "eviter_attention",
+      "label": "Éviter l'attention",
+      "category": "Discrétion",
+      "icons": [
+        "oeil",
+        "oreille",
+        "plume"
+      ]
+    },
+    {
+      "id": "percevoir_detail",
+      "label": "Percevoir un détail",
+      "category": "Perception",
+      "icons": [
+        "oeil",
+        "oeil",
+        "main"
+      ]
+    },
+    {
+      "id": "poursuivre",
+      "label": "Poursuivre",
+      "category": "Déplacement",
+      "icons": [
+        "oeil",
+        "empreinte",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "contourner",
+      "label": "Contourner",
+      "category": "Déplacement",
+      "icons": [
+        "oeil",
+        "empreinte",
+        "plume"
+      ]
+    },
+    {
+      "id": "percevoir_mouvement",
+      "label": "Percevoir un mouvement",
+      "category": "Perception",
+      "icons": [
+        "oeil",
+        "plume",
+        "plume"
+      ]
+    },
+    {
+      "id": "percevoir_son_faible",
+      "label": "Percevoir un son faible",
+      "category": "Perception",
+      "icons": [
+        "oreille",
+        "oreille",
+        "oeil"
+      ]
+    },
+    {
+      "id": "reperer_direction_sonore",
+      "label": "Repérer une direction sonore",
+      "category": "Perception",
+      "icons": [
+        "oreille",
+        "oreille",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "rester_immobile",
+      "label": "Rester immobile / retenir son souffle",
+      "category": "Discrétion",
+      "icons": [
+        "oreille",
+        "oreille",
+        "plume"
+      ]
+    },
+    {
+      "id": "se_deplacer_aveugle",
+      "label": "Se déplacer à l'aveugle",
+      "category": "Déplacement",
+      "icons": [
+        "oreille",
+        "main",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "reculer",
+      "label": "Reculer",
+      "category": "Déplacement",
+      "icons": [
+        "oreille",
+        "empreinte",
+        "plume"
+      ]
+    },
+    {
+      "id": "inspecter_surface",
+      "label": "Inspecter une surface",
+      "category": "Perception",
+      "icons": [
+        "main",
+        "main",
+        "oeil"
+      ]
+    },
+    {
+      "id": "tester_prise",
+      "label": "Tester une prise / un appui",
+      "category": "Déplacement",
+      "icons": [
+        "main",
+        "main",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "atterrir_souplement",
+      "label": "Atterrir souplement",
+      "category": "Déplacement",
+      "icons": [
+        "main",
+        "main",
+        "plume"
+      ]
+    },
+    {
+      "id": "ramper",
+      "label": "Ramper",
+      "category": "Déplacement",
+      "icons": [
+        "main",
+        "empreinte",
+        "empreinte"
+      ]
+    },
+    {
+      "id": "se_glisser",
+      "label": "Se glisser dans un passage étroit",
+      "category": "Déplacement",
+      "icons": [
+        "main",
+        "empreinte",
+        "plume"
+      ]
+    },
+    {
+      "id": "se_faufiler",
+      "label": "Se faufiler",
+      "category": "Discrétion",
+      "icons": [
+        "main",
+        "plume",
+        "plume"
+      ]
+    },
+    {
+      "id": "fuir",
+      "label": "Fuir",
+      "category": "Déplacement",
+      "icons": [
+        "empreinte",
+        "empreinte",
+        "plume"
+      ]
+    },
+    {
+      "id": "franchir_obstacle",
+      "label": "Franchir un obstacle avec agilité",
+      "category": "Déplacement",
+      "icons": [
+        "empreinte",
+        "plume",
+        "plume"
+      ]
+    }
+  ]
+}
